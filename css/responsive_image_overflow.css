@@ -1,0 +1,74 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+} 
+
+div {
+	width: 96vw;
+	margin: 0 auto;
+	border: solid;
+	padding: 20px 2rem;
+}
+
+h1 {
+	font-size: 10vw;
+	display: inline;
+	border: solid;	
+}
+
+p {
+	text-align: justify;
+	font-size: 2.3vw;
+}
+
+div.overflowfix {
+	overflow: hidden;
+}
+
+img {
+	max-width: 300px;
+	float: right;
+	margin-left: 3rem;
+}
+
+div.square {
+	width: 100vw;
+	max-width: 100%;
+	height: 35.8vw;
+	min-height: max-content;
+	max-height: 50.8vh;
+	background-color: red;
+}
+
+.title {
+	display: inline-block;
+	/* box-decoration-break: clone; */
+	font-size: 10rem;
+}
+
+@media (max-width: 769px) {
+	img {
+		display: block;
+		float: none;
+		margin: 0 auto 4rem;
+	}
+
+	h1 {
+		text-align: center;
+		margin: 0;
+		display: inline;
+	}
+
+	p {
+		/* width: 100%; */
+		margin: 4rem auto;
+		font-size: 3vmax;
+		width: 90%;
+	}
+}

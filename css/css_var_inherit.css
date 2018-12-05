@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+	--outline: initial;
+}
+
+body {
+	background-color: #718FBA;
+}
+
+div {
+	outline: var(--outline);
+	padding: 50px;
+	height: auto;
+	width: 25%;
+	margin: 3% 10%;
+	background-color: #fff;
+}
+
+div > div {
+	background: red;
+}
+
+.block1 {
+	--outline: .2em solid;
+}
+
+.block1 div {
+	--outline: inherit;
+}

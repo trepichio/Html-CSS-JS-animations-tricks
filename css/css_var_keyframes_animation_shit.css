@@ -1,0 +1,25 @@
+@keyframes bg {
+	from {background-color: var(--bg);}
+	to {background-color: yellow;}
+}
+
+* {
+	box-sizing: border-box;
+	font-size: 25px;
+	font-weight: 900;
+	font-family: Arial, sans-serif;
+}
+
+div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30vh;
+	font-size: 2.2rem;
+}
+
+#animation.slide {
+	--bg: green;
+	/* background-color: var(--bg); */
+	animation: 1.5s bg infinite alternate;
+}

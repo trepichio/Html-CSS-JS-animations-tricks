@@ -1,0 +1,28 @@
+* {
+	box-sizing: border-box;
+
+}
+
+div {
+	width: 14vw;
+	height: 10vh;
+	display: flex;
+	text-align: center;
+	margin: 30% auto;
+}
+
+div > span {
+	flex: 1;
+	align-self: center;
+	justify-content: center;
+}
+
+div.block {
+	background: radial-gradient(
+		transparent calc(100% - var(--corners)),
+		var(--color) 0
+		);
+	--color: blue;
+	--corners: 12px;
+	color: var(--color);
+}

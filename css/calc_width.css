@@ -1,0 +1,39 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+} 
+
+body {
+	font-family: Edelsans, sans-serif;
+	font-size: 2rem;
+	background: #000;
+	color: #fff;
+	line-height: 1.5;
+}
+
+article {
+	width: 80%;
+	margin: 0 auto;
+	background: #fff;
+	padding: 0 2rem;
+	color: #000;
+}
+
+article header {
+	width: calc(100% + 4rem);
+	margin-left: -2rem;
+}
+
+article header img {
+	width: 100%;
+	height: auto;
+}
+
+
+

@@ -1,0 +1,10 @@
+* {
+	box-sizing: border-box;
+}
+
+article {
+	--img: url('http://placekitten.com/g/800/600');
+	background: var(--img) center / cover;
+	width: 100%;
+	height: 800px;
+}

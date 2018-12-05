@@ -1,0 +1,35 @@
+@keyframes typing {
+	from {
+		width: 0;
+	}
+}	
+
+@keyframes caret {
+	50% { border-color: transparent; }
+}
+
+* {
+	box-sizing: border-box;
+	--length: initial;
+}
+
+body {
+	background-color: #000;
+	color: white;
+	font: 30px Arial, sans-serif;
+}
+
+div {
+	padding: 50px;
+	height: auto;
+	width: 70%;
+	margin: 5% 25%;
+	/* background-color: #fff; */
+}
+
+p.typing {
+	width: calc(var(--length)*1ch);
+	border-right: 2px solid;
+	overflow: hidden;
+	animation: typing calc(var(--length) * .4s) steps(var(--length)), caret 0.2s step-end infinite alternate;
+}

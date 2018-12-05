@@ -1,0 +1,92 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+} 
+
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	--box-shadow-original:	0 1px 2px rgba(0, 0, 0, .15);
+	--box-shadow-hover:		0 5px 15px rgba(0, 0, 0, .3);
+}
+
+h1 {
+	font-weight: 200;
+	margin: 0;
+}
+
+code {
+	background: hsl(0, 0%, 100%);
+	padding: 0.3rem;
+	font-family: monospace;
+	font-weight: 600;
+}
+
+main {
+	width: 80%;
+	min-width: max-content;
+	margin: 6rem auto;
+	padding: 3rem 1rem;
+	background: hsl(0, 0%, 50%, 0.1);
+	display: flex;
+	justify-content: space-around;
+}
+
+div.box-shadow-container,
+div.pseudo-element-container {
+	text-align: center;
+	width: 400px;
+	--margin: 5rem;
+}
+
+div.box-shadow-container {
+	margin-right: var(--margin);
+}
+
+div.pseudo-element-container {
+	margin-left: var(--margin);
+}
+.flex-container {
+	/* border: solid; */
+	margin-top: 3rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex-item {
+	background: hsl(0, 0%, 100%, 0.8);
+	width: 100px;
+	height: 100px;
+}
+
+.make-it-slow .flex-item,
+.make-it-fast .flex-item {
+	box-shadow: var(--box-shadow-original);
+}
+
+.make-it-slow .flex-item {
+	transition: box-shadow .3s ease-in-out;
+}
+
+.make-it-slow .flex-item:hover  {
+	box-shadow: var(--box-shadow-hover);
+}
+
+.make-it-fast .flex-item::after {
+	display: block;
+	content: "";
+	width: 100px;
+	height: 100px;
+	box-shadow: var(--box-shadow-hover);
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+}
+
+.make-it-fast .flex-item:hover::after {
+	opacity: 1;
+}

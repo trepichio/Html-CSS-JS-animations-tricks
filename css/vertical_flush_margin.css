@@ -1,0 +1,26 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+} 
+
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 2rem;
+}
+
+img {
+	float: left;
+	width: 50%;
+}
+
+img ~ p {
+	margin-left: calc(50% + 2rem);
+}
+
+

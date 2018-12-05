@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 30px;
+	font-family: Arial, sans-serif;
+	font-weight: 999;
+	background: lightblue;
+	text-align: center;
+}
+
+div {
+	display: flex;
+	background: #fff;
+	height: 300px;
+	width: 300px;
+	margin: 50px 30%;
+	justify-content: center;
+	align-items: center;
+}
+
+.block {
+	--size:  8;
+	--side: calc(var(--size) * 1em);
+	font-size: 36px;
+	width: var(--side);
+	height: var(--side);
+}
