@@ -1,0 +1,77 @@
+
+html, body {
+	background-color: #feffee;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+} 
+
+body {
+	font-family: Edelsans, sans-serif;
+	font-size: 2rem;
+	line-height: 1.5;
+}
+
+h1 {
+	margin: 0;
+	font-family: Agenda Bold, Gill Sans, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 3em;
+	padding: .5em 0;
+	color: #fff;
+	background: #333;
+	text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2);
+	font-weight: 700;
+	background-image: url('https://static.dezeen.com/uploads/2017/09/vista-tower-studio-gang-chicago_dezeen_hero-852x479.jpg');
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+h2 {
+	font-family: Agenda Medium, Helvetica, sans-serif;
+	margin-left: 2em;
+}
+
+nav {
+	background: #a33;
+	margin-top: 0;
+	padding: .5em 0;
+	text-align: center;
+}
+
+nav a {
+	text-decoration: none;
+	color: #fff;
+	padding: .5em;
+	font-family: monospace;
+}
+
+figure {
+	float: right;
+	text-align: center;
+}
+
+figcaption {
+	margin: 1em;
+	font-style: italic;
+}
+
+p {
+	font-family: Baskerville, Times, serif;
+	text-align: justify;
+	margin-left: 5em;
+	margin-right: 2em;
+}
+
+
