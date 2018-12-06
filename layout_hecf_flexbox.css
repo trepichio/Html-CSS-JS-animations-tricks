@@ -69,6 +69,6 @@ footer {
 
 @media screen and (max-width: 600px) {
 	.row {
-		display: block;
+		flex-direction: column;		
 	}
 }
