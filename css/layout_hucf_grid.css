@@ -88,7 +88,10 @@ footer {
 	 	'middle' 2fr
 	 	'right' 1fr
 	 	'footer';
+ 	}
 
- }
- 
+ 	div#col2 {
+		line-height: 4;
+ 	}
+
 }
