@@ -75,6 +75,13 @@ footer {
 @media screen and (max-width: 600px) {
 	
 	.row {
-		grid-template-areas: 'left' 'middle' 'right';
+		grid: 
+			'left'
+			'middle' 20vh
+			'right';
+	}
+
+	div#col2 {
+		line-height: 10vh;
 	}
 }
