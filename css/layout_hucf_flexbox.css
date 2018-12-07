@@ -42,7 +42,7 @@ main {
 }
 
 .col {
-	flex-basis: 24%;
+	flex: 1;
 	padding: 2rem;
 	text-align: center;
 	border: 1px solid rgba(0, 0, 0, 0.2);
@@ -54,7 +54,7 @@ div#col1 {
 
 div#col2 {
 	background-color: hsl(0, 0%, 73%);
-	flex-basis: 50%;
+	flex: 2;
 }
 
 div#col3 {
