@@ -23,8 +23,10 @@ body {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	display: grid;
 	grid-template: 'header header header' 
-					'main main main' 
-					'footer footer footer';
+					'left middle right'  
+					'footer footer footer'
+					/ 1fr 2fr 1fr;
+	grid-gap: 10px;	
 }
 
 header {
@@ -36,12 +38,13 @@ header {
 	background-color: hsl(0, 0%, 69%);
 }
 
-main {
+/* main {
 	grid-area: main;
 	display: grid;
 	grid-template: 'left middle middle right';
-	grid-gap: 10px;	
+	grid-auto-rows: 2em;
 }
+ */
 
 .col {
 	padding: 2rem;
@@ -74,14 +77,18 @@ footer {
 
 @media screen and (max-width: 600px) {
 	
-	.row {
-		grid: 
-			'left'
-			'middle' 20vh
-			'right';
+/* 	.row {
+		grid-template-areas: 'left' 'middle' 'middle' 'right';
 	}
+ */
+ body {
+ 	grid-template: 
+	 	'header'
+	 	'left' 1fr
+	 	'middle' 2fr
+	 	'right' 1fr
+	 	'footer';
 
-	div#col2 {
-		line-height: 10vh;
-	}
+ }
+ 
 }
