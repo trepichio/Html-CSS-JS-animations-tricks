@@ -17,6 +17,15 @@ body {
 	line-height: 1.5;
 }
 
+p.message {
+	background-color: #F00;
+	border-radius: 20px;
+	padding: 10px;
+	text-align: center;
+	color: rgb(0, 0, 0);
+	font-style: oblique;
+}
+
 header, aside, footer {
 	background: rgb(82, 127, 94);
 }
@@ -40,11 +49,14 @@ article {
 
 @media (min-width: 740px) and (max-width: 1200px) {
 	.grid {
-		grid-template-columns: 1fr [content-start] 4fr [content-end];
+		grid-template-columns: 200px [content-start] 600px [content-end];
+		grid-template-rows: minmax(auto, 1fr) 5fr 1fr;
+		justify-content: center;
+		height: 98vh;
 	}
 
 	header {
-		grid-column: 1 / 4;
+		grid-column: 1 / 3;
 	}
 
 	aside {
@@ -65,17 +77,50 @@ article {
 }
 
 @media (min-width: 1201px) {
+	.grid {
+		grid-template: 
+						"header aside" 2fr
+						"content content" 6fr
+						"footer footer" 1fr
+						/ 1fr 1fr;
+	}
+
 	.grid aside {
 		background-color: #000;
+		grid-area: aside;
+	}
+
+	.grid footer {
+		grid-area: footer;
 	}
 
 	.grid article {
 		grid-row: 3;
+		position: relative;
+		grid-area: content;
+	}
+
+	.grid article h1 {
+		border: 2px dashed;
+		position: absolute;
+		top: -10px;
+		right: 90px;
+		background-color: rgba(0, 100, 0, 0.4);
+		padding: 10px;
+		filter: drop-shadow(0px 10px 3px rgba(0, 0, 0, 0.6)) 
+				drop-shadow(0px -10px 3px rgba(0, 0, 0, 0.6))
+				drop-shadow(-10px 0px 3px rgba(0, 0, 0, 0.6))
+				drop-shadow(10px 0px 3px rgba(0, 0, 0, 0.6));
+		transition: background 0.3s;
+	}
+
+	.grid article h1:hover {
+		background-color: hsla(84, 100%, 50%, 0.4);
 	}
 }
 
-
-
-
-
-
+@supports(display: grid) {
+	.message {
+		display: none;
+	}
+}
