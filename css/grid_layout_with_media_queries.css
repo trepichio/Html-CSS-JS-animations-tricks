@@ -201,7 +201,7 @@ nav a:hover {
 		position: absolute;
 		top: -10px;
 		right: 90px;
-		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://thenewcode.com/assets/images/bugs.jpg');
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('http://thenewcode.com/assets/images/bugs.jpg');
 		background-color: rgba(0, 100, 0, 0.4);
 		background-repeat: no-repeat;
 		-webkit-background-size: cover;
@@ -212,11 +212,14 @@ nav a:hover {
 				drop-shadow(0px -10px 3px rgba(0, 0, 0, 0.6))
 				drop-shadow(-10px 0px 3px rgba(0, 0, 0, 0.6))
 				drop-shadow(10px 0px 3px rgba(0, 0, 0, 0.6));
-		transition: background 0.3s;
+		transition: background 0.5s;
 	}
 
 	.grid article h1:hover {
-		background-color: hsla(84, 100%, 50%, 0.4);
+		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('http://thenewcode.com/assets/images/bugs.jpg');
+		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
 	}
 }
 
