@@ -39,6 +39,7 @@ ul#nav li a {
 	display: block;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 	padding-left: 1em;
+	text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.7);
 }
 
 ul#nav li a:hover {
@@ -117,6 +118,30 @@ ul#nav li.multi:hover ul {
 	}
 
 	.grid header { order: 1; }
+
+	ul#nav a {
+		width: 12em;
+		padding: .4em;
+	}
+
+	ul#nav > li {
+		float: left;
+		position: relative;
+		margin-right: 2rem;
+	}
+
+	ul#nav li.multi ul {
+		position: absolute;
+		opacity: 0;
+		transition: .4s;
+		pointer-events: none;
+	}
+
+	ul#nav li.multi:hover ul {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
 
 }
 
