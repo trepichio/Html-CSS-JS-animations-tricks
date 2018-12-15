@@ -1,0 +1,91 @@
+@font-face {
+	font-family: Impact Label;
+	src: url('../Fonts/Impact Label.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@keyframes rotation {
+	to {transform: rotate(360deg)}
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+} 
+
+body {
+	background: #777;
+}
+
+header {
+	font-family: Impact Label;
+	font-size: 500%;
+	letter-spacing: 1.3rem;
+	color: orange;
+	margin-bottom: 2rem;
+}
+
+header, nav, footer {
+	text-align: center;
+}
+
+nav a {
+	font-family: Impact Label, sans-serif;
+	text-decoration: none;
+	font-size: 200%;
+	color: #323;
+	background: #fff;
+	display: inline-block;
+	margin: 1.1em;
+	border: 0.5em solid #323;
+	position: relative;
+	border-radius: 3px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+nav a:hover, nav a:focus {
+	background: #996699;
+	animation: rotation 1.5s ease-in-out;
+}
+
+nav a:nth-child(odd){
+	margin-top: 1em;
+	transform: rotate(-8deg);
+}
+
+nav a:nth-child(even){
+	margin-top: .8em;
+	transform: rotate(8deg);
+}
+
+nav a:nth-child(4n){
+	margin-top: -0.8em;
+	transform: rotate(2deg);
+}
+
+nav a:nth-child(even)::before {
+	content: "";
+	position: absolute;
+	top: -.5em;
+	right: -.5em;
+	border-width: 0 16px 16px 0;
+	border-style: solid;
+	border-color: #bbb #777;
+}
+
+footer {
+	font-size: medium;
+	font-style: oblique;
+	border-top: 1px dashed #000;
+	margin: 0 auto;
+	margin-top: 3rem;
+	padding-top: 2rem;
+	width: 90%;
+}
