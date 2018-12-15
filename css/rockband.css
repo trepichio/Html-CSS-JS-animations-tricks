@@ -44,7 +44,8 @@ nav a {
 	background: #fff;
 	display: inline-block;
 	margin: 1.1em;
-	border: 0.5em solid #323;
+	border: 1em solid #323;
+	border-right: 1.3em solid;
 	position: relative;
 	border-radius: 3px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
@@ -73,9 +74,9 @@ nav a:nth-child(4n){
 nav a:nth-child(even)::before {
 	content: "";
 	position: absolute;
-	top: -.5em;
-	right: -.5em;
-	border-width: 0 16px 16px 0;
+	top: -1em;
+	right: -1.3em;
+	border-width: 30.3px 20px 30.3px 0;
 	border-style: solid;
 	border-color: #bbb #777;
 }
