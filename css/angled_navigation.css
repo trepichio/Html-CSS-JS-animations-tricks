@@ -43,13 +43,15 @@ ul#angled-nav {
 
 ul#angled-nav li{
 	list-style: none;
-	width: 16rem;
+	width: 18rem;
 	box-shadow: 8px 0 3px rgba(0, 0, 0, 0.2);
 	position: relative;
 	background-color: #ff0;
 	background-size: 100% 120%;
 	background-repeat: no-repeat;
 	overflow: hidden;
+	transition: .8s;
+	margin-right: -2rem;
 }
 
 ul#angled-nav li, ul#angled-nav li a {
@@ -65,7 +67,7 @@ ul#angled-nav li, ul#angled-nav li a {
 	letter-spacing: .25rem;
 	width: 24rem;
 	background: rgba(0, 0, 0, 0.3);
-	margin-left: -2rem;
+	margin-left: -5rem;
 	padding: 3rem 3rem;
 }
 
@@ -77,21 +79,21 @@ ul#angled-nav li, ul#angled-nav li a {
 #mars {
 	z-index: 4;
 	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mars.jpg');
-	left: -20px;
 }
+
 #belize {
 	z-index: 3;
 	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/belize.jpg');
-	left: -40px;
 }
+
 #monaco {
 	z-index: 2;
 	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/monaco.jpg');
-	left: -60px;
 }
 
+
 #angled-nav li:hover {
-	transform: translateX(10px);
+	transform: translateX(2.5rem);
 }
 
 #angled-nav li:hover a {
