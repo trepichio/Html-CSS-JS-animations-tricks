@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Center-aligned Logo Navigation</title>
+	<link rel="stylesheet" href="css/centered-logo-nav.css">
+	<base href="#">
+</head>
+<body>
+	<header>
+		<svg preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<title>Cars</title>
+				<desc>A chrome logo for the "Cars" movie</desc>
+				<defs>
+					<mask id="carsLogoMask">
+						<image width="100%" height="100%" xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cars-logo-mask.png"></image>
+					</mask>
+				</defs>
+				<image mask="url(#carsLogoMask)" width="100%" height="100%"  xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cars-logo.jpg"></image>
+			</svg>
+	</header>
+	<nav>
+		<span>
+			<a href="">Home</a>
+			<a href="">About</a>
+		</span>
+		<span>
+			<a href="">Contact</a>
+			<a href="">Retro</a>
+		</span>
+	</nav><!-- /header -->
+</body>
+</html>
