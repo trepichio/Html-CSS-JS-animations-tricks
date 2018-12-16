@@ -60,3 +60,33 @@ nav a:hover {
 	background: rgba(0, 0, 0, 0.2);
 }
 
+@media all and (max-width: 500px) {
+	nav a {
+		font-size: 1rem;
+	}
+}
+
+@media all and (max-width: 450px) {
+	nav a {
+		font-size: 0.8rem;
+	}
+}
+
+@media all and (max-width: 400px) {
+	nav {
+		padding: 8% 0 0;
+	}
+	nav, nav span, nav span a {
+		display: block;
+		font-size: 1rem;
+		width: 100%;
+		text-align: center;
+	}
+}
+/* 
+@media all and (max-width: 450px) {
+	nav a {
+		font-size: 0.8rem;
+	}
+}
+ */
