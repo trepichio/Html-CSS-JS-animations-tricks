@@ -1,0 +1,51 @@
+html {
+	box-sizing: border-box;
+	font-size: 120%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+} 
+
+nav {
+	background: #666;
+	padding: 2rem .5rem;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+	transition: .3s text-shadow linear;
+	font-weight: 400;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+nav a {
+	text-decoration: none;
+	color: #fff;
+	padding: 1rem;
+	font-size: 1.8rem;
+	position: relative;
+}
+
+
+nav a span {
+	font-size: 1rem;
+	font-weight: 400;
+	color: #999;
+	display: block;
+	text-transform: uppercase;
+	position: absolute;
+	top: 3rem;
+	left: 3rem;
+	width: 11rem;
+	line-height: 1.3;
+}
+
+nav:hover a {
+	text-shadow: 0 0 6px #fff;
+	opacity: 0.8;
+}
+
+nav a:hover {
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+	opacity: 1;
+}
