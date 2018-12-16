@@ -49,3 +49,44 @@ nav a:hover {
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 	opacity: 1;
 }
+
+@media all and (max-width: 860px) {
+	nav {
+		column-count: 2;
+	}
+
+	nav a, nav a span {
+		text-align: center;
+	}
+	nav a {
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 620px) {
+	nav a {
+		font-size: 1.5rem;
+	}
+
+	nav a span { font-size: 0.8rem; }
+}
+
+@media all and (max-width: 568px){
+	
+	nav { column-count: 1; }
+
+	nav a {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	nav a span {
+		position: relative;
+		top: 0;
+		left: 2rem;
+		width: 100%;
+	}
+
+}
