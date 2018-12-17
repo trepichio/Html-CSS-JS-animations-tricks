@@ -1,0 +1,59 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+} 
+
+body {
+	background: #ccc;
+	font-size: 2rem;
+}
+
+div.windows label {
+	font-size: 3rem;
+	display: block;
+	background: #660b0b;
+	border-radius: 5px;
+	padding: .6rem;
+
+}
+div.windows label:hover,
+div.windows label:focus {
+	cursor: pointer;
+	background: #311;
+}
+
+input.toggle{
+	display: none;
+}
+
+div.windows {
+	color: #fff;
+	width: 220px;
+	padding: 0.72rem;
+	border-radius: 5px;
+	background: #c6a24b;
+	margin: 1rem;
+	text-align: center;
+}
+
+input.toggle ~ div {
+	max-height: 0;
+	margin: .2rem;
+	overflow: hidden;
+	transition: 0.8s max-height ease-out;
+}
+
+input.toggle:checked ~ div {
+	max-height: 810px;
+	transition: 2.5s max-height cubic-bezier(0.730, -0.485, 0.15, 1.62);
+}
+
+input.toggle:checked + label {
+	background: red;
+}
