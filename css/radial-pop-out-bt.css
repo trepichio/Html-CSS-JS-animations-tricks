@@ -1,0 +1,38 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+} 
+
+body {
+	background: #fee;
+}
+
+div.radial {
+	width: 100px;
+	height: 100px;
+	margin: 3rem auto;
+	background: rgb(255, 0, 0);
+	border-radius: 50%;
+	transition: all .5s;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+div.radial:hover {
+	background: #000;
+}
+
+div.bar {
+	width: 50%;
+	height: 10%;
+	margin: 0.3rem auto;
+	background: #fff;
+}
+
