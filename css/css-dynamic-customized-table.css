@@ -1,0 +1,65 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+} 
+
+body {
+	font-size: 2.5rem;
+}
+
+table#kurosawa {
+	background-image: url('http://thenewcode.com/assets/images/seven-samurai.jpg');
+	background-size: cover;
+	border-collapse: collapse;
+	margin: 0 auto;
+	text-align: center;
+}
+
+table#kurosawa caption {
+	font-size: larger;
+	padding: 1em;
+}
+
+table#kurosawa td {
+	padding: 0.5rem 2rem;
+}
+
+table#kurosawa thead tr {
+	background: rgba(0, 0, 0, 1);
+}
+
+table#kurosawa thead tr th a {
+	text-decoration: none;
+	color: #fff;	
+	padding: 0.5rem;
+	display: block;
+}
+
+table#kurosawa thead tr th a:hover {
+	background: #777;
+}
+
+table#kurosawa col:target {
+	background: rgba(255, 0, 0, 0.5);
+}
+
+table#kurosawa tbody tr:nth-child(odd) {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+table#kurosawa tbody tr:hover {
+	color: #fff;
+	background: rgba(0, 0, 0, 0.8);
+	cursor: pointer;
+}
+
+
+
+
+
