@@ -21,13 +21,41 @@ label span.shotcutkey {
 	border-bottom: 1px solid red;
 }
 
+input#ddd
+{
+	width: 4ch;
+	text-align: center;
+}
+
+label[for=phonenumber] + span::before {
+	content: "(";
+}
+
+label[for=phonenumber] + span::after {
+	content: ")";
+}
+
+label[for=phonenumber] + span::before,
+label[for=phonenumber] + span::after {
+	font-variant: all-small-caps;
+	font-size: 2rem;
+}
+
+label, input {
+	margin: 0.2rem;
+}
+
 /* label and input on separated lines */
-label,
+
+/* label,
 input[type="submit"] {
 	display: block;
 }
+ */
+
 
 /* label and input on same line, evenly spaced with float */
+
 /* label {
 	display: block;
 	width: 10rem;
@@ -35,7 +63,10 @@ input[type="submit"] {
 }
 
 label,
-input {
+input,
+select,
+label[for=phonenumber] + span::before,
+label[for=phonenumber] + span::after {
 	float: left;
 }
 
@@ -46,14 +77,14 @@ input[type="submit"] {
 
 /* label and input on same line, spaced with same width using table */
 
-/* label, input {
+label, input {
 	display: table-cell;
 }
 
 label {
-	width: 12rem;
+	width: 10rem;
 }
 
 form div {
 	display: table-row;
-} */
+}
