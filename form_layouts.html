@@ -23,27 +23,34 @@
 		<div>
 			<label for="postal_code"><span class="shotcutkey">P</span>ostal Code
 			</label>
-			<input type="text" name="postal_code" accesskey="p">
+			<input type="text" id="postal_code" accesskey="p">
 		</div>
 		<div>
 			<label for="street">Str<span class="shotcutkey">e</span>et
 			</label>
-			<input type="text" name="street" accesskey="e">
+			<input type="text" id="street" accesskey="e">
 		</div>
 		<div>
 			<label for="city"><span class="shotcutkey">C</span>ity
 			</label>
-			<input type="text" name="city" accesskey="c">
+			<input type="text" id="city" accesskey="c">
 		</div>
 		<div>
 			<label for="state"><span class="shotcutkey">S</span>tate
 			</label>
-			<input type="text" name="state" accesskey="s">
+			<select id="state" accesskey="s">
+			 	<option value="">&nbsp;&nbsp;</option>
+			 	<option value="MG">MG</option>
+			 	<option value="RJ">RJ</option>
+			 	<option value="SC">SC</option>
+			 	<option value="SP">SP</option>
+			 </select>
 		</div>
 		<div>
 			<label for="phonenumber">Phone <span class="shotcutkey">N</span>umber
 			</label>
-			<input type="tel" name="phonenumber" value="" placeholder="(xx) xxxxx-xxxx" accesskey="n">
+			<span><input type="text" id="ddd" placeholder="xx" accesskey="d"></span>
+			<input type="tel" id="phonenumber" value="" placeholder="xxxxx-xxxx" accesskey="n">
 		</div>
 		<input type="submit" id="submit" value="Submit">
 	</form>
