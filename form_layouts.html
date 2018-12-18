@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Form Layouts</title>
+	<link rel="stylesheet" href="css/form_layouts.css">
+</head>
+<body>
+	<form>
+		<!-- divs are being used only to separate table-rows with CSS -->
+
+		<div>
+			<label for="fname"><span class="shotcutkey">F</span>irst Name
+			</label>
+			<input type="text" id="fname" accesskey="f">
+		</div>
+		<div>
+			<label for="lname"><span class="shotcutkey">L</span>ast Name
+			</label>
+			<input type="text" id="lname" accesskey="l">
+		</div>
+		<div>
+			<label for="postal_code"><span class="shotcutkey">P</span>ostal Code
+			</label>
+			<input type="text" name="postal_code" accesskey="p">
+		</div>
+		<div>
+			<label for="street">Str<span class="shotcutkey">e</span>et
+			</label>
+			<input type="text" name="street" accesskey="e">
+		</div>
+		<div>
+			<label for="city"><span class="shotcutkey">C</span>ity
+			</label>
+			<input type="text" name="city" accesskey="c">
+		</div>
+		<div>
+			<label for="state"><span class="shotcutkey">S</span>tate
+			</label>
+			<input type="text" name="state" accesskey="s">
+		</div>
+		<div>
+			<label for="phonenumber">Phone <span class="shotcutkey">N</span>umber
+			</label>
+			<input type="tel" name="phonenumber" value="" placeholder="(xx) xxxxx-xxxx" accesskey="n">
+		</div>
+		<input type="submit" id="submit" value="Submit">
+	</form>
+</body>
+</html>

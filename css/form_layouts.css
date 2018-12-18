@@ -1,0 +1,59 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+} 
+
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-color: #ffe;
+	font-size: 1.4rem;
+}
+
+label span.shotcutkey {
+	font-weight: bolder;
+	color: rgb(255, 0, 0);
+	border-bottom: 1px solid red;
+}
+
+/* label and input on separated lines */
+label,
+input[type="submit"] {
+	display: block;
+}
+
+/* label and input on same line, evenly spaced with float */
+/* label {
+	display: block;
+	width: 10rem;
+	clear: left;
+}
+
+label,
+input {
+	float: left;
+}
+
+input[type="submit"] {
+	clear: left;
+}
+ */
+
+/* label and input on same line, spaced with same width using table */
+
+/* label, input {
+	display: table-cell;
+}
+
+label {
+	width: 12rem;
+}
+
+form div {
+	display: table-row;
+} */
