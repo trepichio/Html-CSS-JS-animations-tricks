@@ -1,0 +1,34 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+} 
+
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 2rem;
+	width: 90%;
+	max-width: 900px;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+
+div.container p:not(:first-of-type) {
+	margin-right: 50%;
+}
+
+div.img-container {
+	font-size: 1.5rem;
+	padding: 2.2rem;
+	padding-bottom: 3rem;
+	padding-top: 0;
+	width: 50%;
+	float: right;
+	position: sticky;
+	top: 0;
+}
