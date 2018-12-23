@@ -1,0 +1,55 @@
+@keyframes riseandfall {
+	to { transform: scaleY(20); }
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+} 
+
+
+div#bouncy {
+	color: #223;
+	min-height: 200px;
+	display: flex;
+	background: currentcolor;
+	border: 10px solid;
+	align-items: flex-end;
+	justify-content: space-around;
+	width: 60%;
+	margin: 100px auto;
+}
+
+div#bouncy div {
+	width: 15%;
+	height: 10px;
+	background: red;
+	margin-right: .5rem;
+	transform-origin: center bottom;
+}
+
+#bouncy div {
+	animation: riseandfall 1s infinite alternate cubic-bezier(.53,.14,.83,.67);
+}
+
+#bouncy div:nth-child(2) {
+	animation-delay: .3s;
+}
+
+#bouncy div:nth-child(3) {
+	animation-delay: 0.4s;
+}
+
+#bouncy div:nth-child(4) {
+	animation-delay: 0.5s;
+}
+
+#bouncy div:nth-child(5) {
+	animation-delay: 0.6s;
+}
