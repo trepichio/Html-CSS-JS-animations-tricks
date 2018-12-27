@@ -59,8 +59,9 @@ div#marquee div span {
 
 #marquee div:first-of-type span {
 	transform: translateX(60rem);
-	text-shadow: 4px 0 4px rgba(0, 0, 0, 0.3);
+	/* text-shadow: 4px 0 4px rgba(0, 0, 0, 0.3); */
 	animation: leftcrawl 6s linear infinite;
+	-webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
 }
 
 #marquee div:last-of-type span {
