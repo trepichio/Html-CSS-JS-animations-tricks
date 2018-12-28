@@ -1,0 +1,52 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+} 
+
+body {
+	margin: 0;
+}
+
+div.wrapper {
+	font-size: 3rem;
+	margin-left: 2rem;
+}
+
+div.wrapper img {
+	float: left;
+	shape-outside: circle();
+}
+
+p:last-of-type {
+	text-align: justify;
+}
+
+#kitten {
+	/* clear: left; */
+	float: right;
+	clip-path: polygon(129px 37px, 243px 173px, 108px 286px, -5px 150px); 
+	shape-outside: polygon(1px 151px, 132px 35px, 233px 175px, 107px 287px);
+}
+
+#hand-left {
+	clear: left;
+	float: left;
+	transform: rotateZ(30deg);
+	margin-right: 14rem;
+	shape-outside: polygon(0 0, 100% 100%, 0 100%);
+}
+#hand-right {
+	clear: right;
+	float: right;
+	transform: rotateY(180deg) rotateZ(30deg);
+	margin-left: 14rem;
+	shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+	
+}
+
