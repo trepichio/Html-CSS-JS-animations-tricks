@@ -14,12 +14,13 @@ body {
 	min-height: 100%;
 	font-size: 1.6rem;
 	margin: 2.5%;
+	background-color: hsla(190, 60%, 65%, 1);
 	background-image: url('../images/back1.jpg'),
-	url('http://placekitten.com/300/300');
-	background-repeat:  no-repeat, repeat;
-	background-size: cover, auto;
+	url('../images/back4.jpg');
+	background-repeat:  repeat-x, no-repeat;
+	background-size: auto, cover;
 	background-position: center bottom, left top;
-	background-blend-mode: lighten, normal;
+	background-blend-mode: overlay, luminosity;
 
 }
 
@@ -39,7 +40,7 @@ div.wrapper {
 	height: 15vw;
 	max-width: 190px;
 	max-height: 190px;
-	/* mix-blend-mode: screen; */
+	/* mix-blend-mode: multiply; */
 }
 
 #black {
@@ -54,7 +55,16 @@ div.wrapper {
 	background-color: white;
 }
 
-#kitten img {
-	width: 100%;
-	mix-blend-mode: overlay;
+#profile img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 5px solid #000;
+	mix-blend-mode: luminosity;
+	transition: border 0.4s linear;
+}
+
+#profile img:hover {
+	border: 2px solid #000;
+	mix-blend-mode: normal;
 }
