@@ -1,0 +1,60 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	min-height: 100%;
+	font-size: 1.6rem;
+	margin: 2.5%;
+	background-image: url('../images/back1.jpg'),
+	url('http://placekitten.com/300/300');
+	background-repeat:  no-repeat, repeat;
+	background-size: cover, auto;
+	background-position: center bottom, left top;
+	background-blend-mode: lighten, normal;
+
+}
+
+div.wrapper {
+	background-color: rgba(90, 125, 80, 1);
+	height: 25vw;
+	max-height: 300px;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center
+}
+
+.box {
+	width: 15vw;
+	height: 15vw;
+	max-width: 190px;
+	max-height: 190px;
+	/* mix-blend-mode: screen; */
+}
+
+#black {
+	background-color: black;
+}
+
+#grey {
+	background-color: grey;
+}
+
+#white {
+	background-color: white;
+}
+
+#kitten img {
+	width: 100%;
+	mix-blend-mode: overlay;
+}
