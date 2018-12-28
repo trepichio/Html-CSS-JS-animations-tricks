@@ -56,8 +56,8 @@ div.wrapper {
 }
 
 #profile img {
-	width: 150px;
-	height: 150px;
+	width: 100%;
+	height: 100%;
 	border-radius: 50%;
 	border: 5px solid #000;
 	mix-blend-mode: luminosity;
