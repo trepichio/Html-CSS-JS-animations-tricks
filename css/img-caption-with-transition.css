@@ -1,0 +1,63 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+} 
+
+div.sliding-container {
+	display: flex;
+}
+
+div.sliding-container figure {
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	flex: 1;
+	font-size: 0;
+}
+div.sliding-container figure figcaption {
+	color: #fff;
+	padding: .3rem;
+	background: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	top: -3rem;
+	font-size: 1.6rem;
+	width: 100%;
+	transition: .6s;
+}
+
+div.sliding-container figure:hover figcaption,
+div.sliding-container figure:focus figcaption {
+	transform: translateY(3rem);
+}
+
+div.sliding-container figure img {
+	max-width: 100%;
+	transition: 2.4s linear;
+}
+
+div.sliding-container figure:first-of-type img {
+	max-width: 133%;
+}
+
+div.sliding-container figure:first-of-type:hover img, 
+div.sliding-container figure:first-of-type:focus img {
+	transform: translateX(-24%);
+}
+
+div.sliding-container figure:last-of-type img:first-of-type {
+	position: absolute;
+}
+
+div.sliding-container figure:last-of-type:hover img:nth-child(1) {
+	opacity: 0;
+}
