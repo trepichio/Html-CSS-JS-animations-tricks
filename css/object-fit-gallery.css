@@ -1,0 +1,189 @@
+@keyframes captionfade {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	color: #444;
+} 
+
+div#o-gallery {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	max-width: 1600px;
+}
+
+div#o-gallery figure {
+	position: relative;
+	flex: 1;
+	max-width: 500px;
+	transition: 1s;
+	margin: 0;
+} 
+
+div#o-gallery img {
+	width: 200px;
+	max-height: 200px;
+	border: 1px solid;
+	object-fit: cover;
+	object-position: 0% 0%;
+	transition: 1s;
+	font-size: 0;
+	line-height: 0;
+}
+
+div#o-gallery figure:hover {
+	flex: 2;
+}
+
+div#o-gallery figure:hover img {
+	width: 100%;
+	max-height: 700px;
+}
+
+div#o-gallery figcaption {
+	position: absolute;
+	top: 55%;
+	left: 105%;
+	opacity: 0;
+	width: 50%;
+}
+
+div#o-gallery figure:hover figcaption {
+	animation: captionfade forwards 1s 1s;
+}
+
+div#o-gallery figure:nth-child(2) {
+	text-align: center;
+}
+
+div#o-gallery figure:nth-child(2) figcaption {
+	text-align: left;
+}
+
+div#o-gallery figure:last-child {
+	text-align: right;
+}
+
+div#o-gallery figure:last-child figcaption {
+	left: -55%;
+}
+
+@media all and (max-width: 1470px) {
+	div#o-gallery figure:last-child figcaption {
+		top: 80%;
+	}
+}
+
+@media all and (max-width: 970px) {
+	div#o-gallery figure:first-child figcaption {
+		top: 75%;
+	}
+	div#o-gallery figure:last-child figcaption {
+		top: 85%;
+	}
+}
+
+@media all and (max-width: 820px) {
+	
+	div#o-gallery figure:first-child figcaption {
+		/* top: 102%; */
+		/* left: 5%; */
+	}
+	div#o-gallery figure:last-child figcaption {
+		top: 90%;
+		/* left: 5%; */
+	}
+}
+
+@media all and (max-width: 800px) {
+	div#o-gallery figure:last-child figcaption {
+		top: 102%;
+		left: 0;
+	}	
+}
+
+@media all and (max-width: 746px) {
+	div#o-gallery figure:first-child figcaption {
+		top: 85%;
+	}
+}
+
+@media all and (max-width: 710px) {
+	div#o-gallery figure:first-child figcaption {
+		top: 102%;
+		left: 0;
+	}	
+}
+@media all and (max-width: 600px) {
+	div#o-gallery { flex-direction: column; }
+	div#o-gallery figcaption {
+		top: 102%;
+		left: 0;
+		width: 30%;
+	}
+
+	div#o-gallery figure, 
+	div#o-gallery figure:last-child {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	div#o-gallery img {
+		border: none;
+		text-align: center;
+	}
+
+	div#o-gallery figure:nth-child(2) figcaption,
+	div#o-gallery figure:last-child figcaption,
+	 {
+		top: -12%;
+		left: auto;
+		right: 0;
+		width: 25%;
+	}
+
+	div#o-gallery figure:last-child figcaption {
+		top: -18%;
+	}
+}
+
+@media all and (max-width: 460px) {
+	div#o-gallery figure:hover {
+		margin-bottom: 4rem;
+	}
+	div#o-gallery figcaption,
+	div#o-gallery figure:nth-child(2) figcaption,
+	div#o-gallery figure:last-child figcaption {
+		width: 100%;
+		text-align: center;
+	}
+
+	div#o-gallery figure:nth-child(2) figcaption {
+		top: -7%;
+	}
+
+	div#o-gallery figure:nth-child(3) figcaption {
+		top: -9%;
+	}
+
+	div#o-gallery figure:nth-child(2):hover,
+	div#o-gallery figure:nth-child(3):hover {
+		margin-top: 4rem;
+		margin-bottom: 0;
+	} 
+
+}
