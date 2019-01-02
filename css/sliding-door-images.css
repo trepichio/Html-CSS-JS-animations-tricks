@@ -1,0 +1,61 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: bolder;
+	line-height: 3;
+} 
+
+figure {
+	position: relative;
+	width: 60vw;
+	height: 60vw;
+	overflow: hidden;
+	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mad-dog.jpg');
+	background-size: cover;
+}
+
+figcaption {
+	position: absolute;
+	top: 0;
+	padding-top: 12vw;	
+	font-size: 10vw;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-align: center;
+}
+
+figure img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: 2s ease-in-out;
+}
+
+figure img:first-of-type {
+	clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+figure img:last-of-type {
+	clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+figure:hover img:first-of-type {
+	transform: translateY(-45%);
+}
+
+figure:hover img:last-of-type {
+	transform: translateY(45%);
+}
