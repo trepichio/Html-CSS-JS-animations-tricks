@@ -1,0 +1,79 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	margin: 0;
+} 
+
+figure {
+	background: url('../images/JTREPICHIO.JPG');
+	background-size: cover;
+	position: relative;
+	color: #fff;
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+	font-size: 0;
+}
+
+figcaption {
+	position: absolute;
+	top: 6%;
+	left: 18%;
+	width: 40%;
+	line-height: 1.4;
+	opacity: 0;
+	font-size: 1.6rem;
+	transition: .4s .2s opacity;
+}
+
+figure img {
+	width: 100%;
+	clip-path: polygon(15% 5%, 60% 5%, 60% 40%, 15% 40%);
+	transition: 0.6s filter;
+}
+
+figure:hover img {
+	filter: blur(8px);
+}
+
+figure:hover figcaption {
+	opacity: 1;
+}
+
+@media all and (max-width: 1200px) {
+	figcaption {
+		font-size: 3rem;
+	}
+	figure img {
+		clip-path: polygon(15% 5%, 60% 5%, 60% 60%, 15% 60%);
+	}
+}
+
+@media all and (max-width: 1000px) {
+	figure {
+		width: 100%;
+	}	
+	figcaption {
+		font-size: 3vw;
+	}
+}
+
+@media all and (max-width: 600px) {
+	figcaption {
+		font-size: 3.5vw;
+	}
+}
+
+@media all and (max-width: 500px) {
+	figure img {
+		clip-path: polygon(15% 5%, 60% 5%, 60% 80%, 15% 80%);
+	}
+}
