@@ -20,7 +20,7 @@ figure {
 	max-width: 1000px;
 }
 
-figure img { width: 100%; }
+figure img { width: 100%; filter: hue-rotate(45deg);}
 
 figure figcaption {
 	position: absolute;
