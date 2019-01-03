@@ -1,0 +1,83 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+} 
+
+div#quad {
+	background-color: #111;
+	font-size: 0;
+	width: 50%;
+	margin: 0 auto;
+}
+
+div#quad figure {
+	margin: 0;
+	width: 50%;
+	height: ;
+	transition: 1s;
+	display: inline-block;
+	position: relative;
+}
+
+div#quad figure img {
+	width: 100%;
+	height: auto;
+}
+
+div#quad figure:nth-child(1) {
+	transform-origin: top left;
+}
+
+div#quad figure:nth-child(2) {
+	transform-origin: top right;
+}
+
+div#quad figure:nth-child(3) {
+	transform-origin: bottom left;
+}
+
+div#quad figure:nth-child(4) {
+	transform-origin: bottom right;
+}
+
+div#quad figure figcaption {
+	width: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	margin: 0;
+	opacity: 0;
+	color: #fff;
+	padding: .3rem;
+	font-size: 1.2rem;
+	position: absolute;
+	bottom: 0;
+	transition: 1s 1s opacity;
+}
+
+.expanded {
+	transform: scale(2);
+	z-index: 5;
+}
+
+div#quad figure.expanded figcaption {
+	opacity: 1;
+}
+
+div.full figure:not(.expanded) {
+	pointer-events: none;
+}
+
+div#quad figure:hover {
+	cursor: pointer;
+	z-index: 4;
+}
+

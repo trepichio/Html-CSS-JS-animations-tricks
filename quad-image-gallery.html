@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Quad image gallery</title>
+	<link rel="stylesheet" href="css/quad-image-gallery.css">
+</head>
+<body>
+	<div id="quad">
+		<figure>
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/rose-red-wine.jpg" alt="" >
+			<figcaption>Rose Red Wine</figcaption>
+		</figure>
+		<figure>
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/guinness-barrels.jpg" alt="" >
+			<figcaption>Guiness Barrels, Dublin</figcaption>
+		</figure>
+		<figure>
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/green-glass-bottle.jpg" alt="" >
+			<figcaption>Green Glass Bottle</figcaption>
+		</figure>
+		<figure>
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/crystal-skull-vodka.jpg" alt="" >
+			<figcaption>Crystal Skull Vodka</figcaption>
+		</figure>
+	</div>
+</body>
+<script type="text/javascript">
+	var quadimages = document.querySelectorAll("#quad figure");
+	for (var i = 0; i < quadimages.length; i++) {
+		quadimages[i].addEventListener('click', function(){
+			this.classList.toggle("expanded");
+			quad.classList.toggle("full");
+
+		})
+	}
+</script>
+</html>
