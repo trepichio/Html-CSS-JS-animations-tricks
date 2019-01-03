@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Modern Mansory Flexbox with JS</title>
+	<link rel="stylesheet" href="css/modern_mansory_flexbox_with_JS.css">
+</head>
+<body>
+	<div class="quantize"></div>
+</body>
+<script type="text/javascript">
+	var container = document.getElementsByClassName('quantize')[0];
+	var butterflies = ['butterfly-on-petal.jpg', 'butterfly-on-yellow-flower.jpg', 'blue-butterfly.jpg', 'albino-butterfly.jpg', 'orange-butterfly.jpg'];
+	
+	function preloadImage (filename) {
+		var img = new Image();
+		img.onload = function () {
+			img.aspectRatio = img.naturalWidth / img.naturalHeight;
+			var fig = document.createElement('figure');
+			fig.appendChild(img);
+			container.appendChild(fig);
+		};
+		img.src = filename;
+		img.alt = "";
+	}
+
+	function loadImages () {
+		for (var i = 0; i < butterflies.length; i++) {
+			var filename = './images/' + butterflies[i];
+			preloadImage(filename);
+		}
+	}
+
+	function fitFlex () {
+		var flexGroup = document.querySelectorAll("figure");
+		var flexArray = Array.prototype.slice.call(flexGroup, 0);
+		flexArray.sort(function (a, b) {
+			imageAspectRatioA = a.firstElementChild.aspectRatio;
+			imageAspectRatioB = b.firstElementChild.aspectRatio;
+			if (imageAspectRatioA < imageAspectRatioB) { return 1;}
+			if (imageAspectRatioA > imageAspectRatioB) { return -1;}
+			return 0;
+		});
+		var widest = flexArray[0].firstElementChild.aspectRatio;
+		var smallestWidth = '300';
+		flexArray.forEach(function (box) {
+			var flex = 1 / (widest / box.firstElementChild.aspectRatio);
+			if (flex == 0) { flex = 1;}
+			boxWidth = smallestWidth * flex;
+			box.style.cssText = "flex: " + flex + "; min-width: " + boxWidth + "px;";
+		});
+	}
+
+	loadImages();
+	window.addEventListener("load",function () {
+		fitFlex();
+	});
+	
+</script>
+</html>
