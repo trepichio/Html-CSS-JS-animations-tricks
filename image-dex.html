@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>image-dex</title>
+	<link rel="stylesheet" href="css/image-dex.css">
+</head>
+<body>
+	<div id="imgdex">
+		<figure>
+			<img src="images/emma-left.jpg" alt="">
+			<figcaption>Emma picture 1</figcaption>
+		</figure>
+		<figure>
+			<img src="images/emma-center.jpg" alt="">
+			<figcaption>Emma picture 2</figcaption>
+		</figure>
+		<figure>
+			<img src="images/emma-bottom-flipped.jpg" alt="">
+			<figcaption>Emma picture 3</figcaption>
+		</figure>
+	<input type="range" id="ranger" min="1" onfocus="this.oldvalue = this.value;" oninput="updateImage(this); this.oldvalue = this.value">
+	</div>
+</body>
+<script type="text/javascript">
+	var imgdex = document.getElementById("imgdex"),
+		figs = imgdex.querySelectorAll('figure'),
+		imgcount = figs.length;
+		ranger.max = imgcount;
+		ranger.value = imgcount;
+
+	for (var i = 0; i < imgcount.length; i++) {
+		var rotation = parseFloat(-92 + "." + (imgcount - i));
+		figs[i].style.transform = 'rotateX('+ rotation +'deg)';
+	}
+
+	document.querySelector('#imgdex figure:last-of-type figcaption').style.opacity = 1;
+
+	function updateImage(slider) {
+		var currentimg = document.querySelector('#imgdex figure:nth-child('+ slider.value +')');
+
+		if (slider.oldvalue != undefined) {
+			var oldimg = document.querySelector('#imgdex figure:nth-child('+ slider.oldvalue +')');
+		} else {
+			slider.oldvalue = imgcount;
+			var oldimg = document.querySelector('#imgdex figure:nth-child('+ slider.oldvalue +')');
+		}
+
+		if (slider.value < slider.oldvalue) {
+			currentimg.style.transform = 'rotateX('+ slider.value +'deg)'
+		}
+
+		if (slider.value > slider.oldvalue) {
+			var rotation = parseFloat(-92 + "." + (imgcount - slider.value));
+			oldimg.style.transform = 'rotateX('+ rotation +'deg)'
+		}
+
+		if (slider.value != slider.oldvalue) {
+			currentimg.querySelector('figcaption').style.opacity = 1;
+			oldimg.querySelector('figcaption').style.opacity = 0;
+		}
+	}
+
+
+</script>
+</html>
