@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>3D Carousel Gallery</title>
+	<link rel="stylesheet" href="css/3D-Carousel.css">
+</head>
+<body>
+	<div id="gallery">
+		<figure id="spinner">
+			<img src="images/wanaka-tree.jpg" alt="">
+			<img src="images/still-lake.jpg" alt="">
+			<img src="images/pink-milford-sound.jpg" alt="">
+			<img src="images/paradise.jpg" alt="">
+			<img src="images/morekai.jpg" alt="">
+			<img src="images/milky-blue-lagoon.jpg" alt="">
+			<img src="images/lake-tekapo.jpg" alt="">
+			<img src="images/milford-sound.jpg" alt="">
+		</figure>
+		<a href="#" style="float: left" accesskey="," tabindex="1" onfocus="galleryspin('-')" onclick="galleryspin('-')">◀</a>
+		<a href="#" style="float: right" accesskey="." tabindex="2" onfocus="galleryspin('')" onclick="galleryspin('')">▶</a>
+	</div>
+</body>
+<script type="text/javascript">
+	var angle = 0;
+	function galleryspin(sign) {
+		spinner = document.querySelector('#spinner');
+		if (!sign) {
+			angle += 45;
+		} else {
+			angle -= 45;
+		}
+		spinner.setAttribute('style', '-webkit-transform: rotateY(' + angle + 'deg); transform: rotateY('+ angle + 'deg);');
+
+	}
+</script>
+</html>

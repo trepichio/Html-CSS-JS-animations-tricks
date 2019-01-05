@@ -1,0 +1,94 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	background: #100000;
+} 
+a {
+	font-size: 4rem;
+	color: #fff;
+	line-height: 2;
+	text-decoration: none;
+	transition: color .6s
+	margin: 5%;
+	position: relative;
+}
+
+a::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;left: 0;
+}
+
+a:hover {
+	color: hsla(0, 100%, 100%, 0.7);
+}
+
+div#gallery {
+	perspective: 1200px;
+	padding-top: 10%;
+	font-size: 0;
+	margin-bottom: 3rem;
+	overflow: hidden;
+}
+
+figure#spinner {
+	transform-style: preserve-3d;
+	min-height: 300px;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50% -500px;
+	transition: 1s;
+}
+
+figure#spinner img {
+	width: 40%;
+	max-width: 425px;
+	position: absolute;
+	left: 30%;
+	transform-origin: 50% 50%;
+	-webkit-transform-origin-z: -500px;
+	outline: 1px solid transparent;
+}
+
+figure#spinner img:nth-child(1) {
+	transform: rotateY(0deg);
+}
+
+figure#spinner img:nth-child(2) {
+	transform: rotateY(-45deg);
+}
+
+figure#spinner img:nth-child(3) {
+	transform: rotateY(-90deg);
+}
+
+figure#spinner img:nth-child(4) {
+	transform: rotateY(-135deg);
+}
+
+figure#spinner img:nth-child(5) {
+	transform: rotateY(-180deg);
+}
+
+figure#spinner img:nth-child(6) {
+	transform: rotateY(-225deg);
+}
+
+figure#spinner img:nth-child(7) {
+	transform: rotateY(-270deg);
+}
+
+figure#spinner img:nth-child(8) {
+	transform: rotateY(-315deg);
+}
