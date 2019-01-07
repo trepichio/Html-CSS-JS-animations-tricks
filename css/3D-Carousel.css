@@ -84,3 +84,38 @@ figure#spinner img:nth-child(7) {
 figure#spinner img:nth-child(8) {
 	transform: rotateY(-315deg);
 }
+
+@media screen and (max-width: 800px) {
+	figure#spinner {
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50% -338px;
+	}
+
+	figure#spinner img {
+	-webkit-transform-origin-z: -338px;
+	}	
+}
+
+@media screen and (max-width: 550px) {
+	figure#spinner {
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50% -218px;
+	}
+
+	figure#spinner img {
+		-webkit-transform-origin-z: -218px;
+	}		
+}
+
+@media screen and (max-width: 400px) {
+	figure#spinner {
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50% -200px;
+	}
+
+
+	figure#spinner img {
+		-webkit-transform-origin-z: -200px;
+	}	
+
+}
