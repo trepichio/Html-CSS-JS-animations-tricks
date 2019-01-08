@@ -1,0 +1,123 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	background: #222;
+	padding-top: 2rem;
+	margin: 0;
+} 
+
+div#zoom-gallery {
+	width: 80%;
+	margin: 0 auto;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+div#zoom-gallery img {
+	width: 100%;
+	margin: 4% 0;
+	-webkit-box-shadow: 0 0 5px #000;
+	box-shadow: 0 0 5px #000;
+	filter: brightness(100%);
+	transition: 1s;
+	flex: 1;
+}
+
+label {
+	display: block;
+	width: 75%;
+	margin: 1.3rem auto;
+	color: #fff;
+	text-shadow: 0 0 2px #000;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	padding: 1rem;
+	text-align: center;
+	font-family: monospace;
+}
+
+label:hover {
+	cursor: pointer;
+	background: #000;
+}
+
+input[type=radio] {
+	display: none;
+}
+
+input:checked + label {
+	background: #433;
+	transition: 0.5s;
+}
+
+input#butterflies:checked ~ div#zoom-gallery img:not(.butterflies),
+input#emma:checked ~ div#zoom-gallery img:not(.emma),
+input#landscape:checked ~ div#zoom-gallery img:not(.landscape) {
+	filter: brightness(60%);
+	-webkit-box-shadow: 0 0 10px #000;
+	box-shadow: 0 0 2px #000;
+	transform: scale(0.9);
+}
+
+input#butterflies:checked ~ div#zoom-gallery img.butterflies,
+input#emma:checked ~ div#zoom-gallery img.emma,
+input#landscape:checked ~ div#zoom-gallery img.landscape {
+	transform: scale(1.1);
+	-webkit-box-shadow: 0 0 10px #000;
+	box-shadow: 0 0 10px #000;
+
+}
+
+
+@media screen and (min-width: 420px) {
+
+	label {
+		display: inline-block;
+		font-weight: bolder;
+		font-size: 3.2vw;
+		width: 25%;
+		margin: 3%;
+	}
+
+	div#zoom-gallery {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		width: 90%;
+	}
+
+
+	div#zoom-gallery img {
+		width: 40%;
+		height: 100%;
+		margin: 3%;
+		max-width: 300px;
+	}
+}
+
+@media screen and (min-width: 650px) {
+	label {
+		font-size: 2.5vw;
+	}	
+	
+	div#zoom-gallery img {
+		margin: 1.5%;
+	}
+
+
+}
