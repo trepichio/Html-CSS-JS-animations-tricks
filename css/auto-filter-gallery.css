@@ -1,0 +1,85 @@
+@keyframes fadeandsmallify {
+	0%{max-height:400px;opacity:1}
+
+	66%{max-height:400px;opacity:0}
+	100%{max-height:0;opacity:0}
+}	
+
+@keyframes solidandlarger {
+	0% {max-height: 0px;opacity: 0;}
+
+	33% {max-height: 400px;opacity: 0;}
+
+	100% {max-height: 400px;opacity: 1;}
+}	
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	margin: 0;
+	background: #223;
+} 
+
+div#locations {
+	font-size: 0;
+	text-align: center;
+	overflow: hidden;
+	max-width: 800px;
+	margin: 0 auto;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+div#locations label {
+	display: inline-block;
+	margin: 1rem;
+	color: #fff;
+	font-size: 2rem;
+	border: 1px solid #000;
+	padding: .8rem;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .8s;
+	background: #111;
+}
+
+div#locations span {
+	color: #fff;
+	font-size: 1.6rem;
+	font-family: monospace;
+}
+
+div#locations img {
+	width: 50%;
+	height: auto;
+	position: relative;
+}
+
+div#locations img:nth-of-type(3n+1) {
+	width: 100%;
+	height: auto;
+}
+
+input[type=checkbox] {
+	display: none;
+}
+ 
+input:checked + label {
+	background: #333 !important;
+}
+
+input:disabled + label {
+	background: rgba(122, 122, 133, 0.5);
+	color: #888 !important;
+	box-shadow: inset 0 0 3px rgba(0,0,0,.6);
+	cursor: default !important;
+}
