@@ -1,0 +1,106 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	background: #fee;
+} 
+
+figure.blinds {
+	position: relative;
+	perspective: 1800px;
+	transform-style: preserve-3d;
+	margin: 0;
+	padding-bottom: 56.5%;
+	max-width: 1000px;
+}
+
+figure.blinds img {
+	position: absolute;
+	top: 0; left: 0;
+	transition: 1s;
+	width: 100%;
+}
+
+img.first {
+	transform: rotateY(0deg);
+}
+
+img.second {
+	transform: rotateY(-180deg) translateZ(1px);
+}
+
+figure.blinds:hover img.first {
+	transform: rotateY(180deg);
+}
+
+figure.blinds:hover img.second {
+	transform:  rotateY(0deg) translateZ(1px);
+}
+
+figure.blinds img:nth-child(1),
+figure.blinds img:nth-child(11) {
+	clip: rect(0px, 100px, 840px, 0px);
+	transform-origin: 50px 0px;
+}
+figure.blinds img:nth-child(2),
+figure.blinds img:nth-child(12) {
+	clip: rect(0px, 200px, 840px,100px);
+	transform-origin: 150px 0px;
+	transition-delay: 100ms;
+}
+figure.blinds img:nth-child(3),
+figure.blinds img:nth-child(13) {
+	clip: rect(0px, 300px, 840px,200px);
+	transform-origin: 250px 0px;
+	transition-delay: 200ms;
+}
+figure.blinds img:nth-child(4),
+figure.blinds img:nth-child(14) {
+	clip: rect(0px, 400px, 840px,300px);
+	transform-origin: 350px 0px;
+	transition-delay: 300ms;
+}
+figure.blinds img:nth-child(5),
+figure.blinds img:nth-child(15) {
+	clip: rect(0px, 500px, 840px,400px);
+	transform-origin: 450px 0px;
+	transition-delay: 400ms;
+}
+figure.blinds img:nth-child(6),
+figure.blinds img:nth-child(16) {
+	clip: rect(0px, 600px, 840px,500px);
+	transform-origin: 550px 0px;
+	transition-delay: 500ms;
+}
+figure.blinds img:nth-child(7),
+figure.blinds img:nth-child(17) {
+	clip: rect(0px, 700px, 840px, 600px);
+	transform-origin: 650px 0px;
+	transition-delay: 600ms;
+}
+figure.blinds img:nth-child(8),
+figure.blinds img:nth-child(18) {
+	clip: rect(0px, 800px, 840px, 700px);
+	transform-origin: 750px 0px;
+	transition-delay: 700ms;
+}
+figure.blinds img:nth-child(9),
+figure.blinds img:nth-child(19) {
+	clip: rect(0px, 900px, 840px, 800px);
+	transform-origin: 850px 0px;
+	transition-delay: 800ms;
+}
+figure.blinds img:nth-child(10n) {
+	clip: rect(0px, 1000px, 840px, 900px);
+	transform-origin: 950px 0px;
+	transition-delay: 900ms;
+}
