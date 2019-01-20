@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Filtered Flexbox Dynamic Image Gallery</title>
+	<link rel="stylesheet" href="css/filtered-flexbox-dynamic-image-gallery.css">
+</head>
+<body>
+	<div id="selectionbar"></div>
+	<div id="flex-dynamic-gallery"></div>
+</body>
+<script type="text/javascript">
+	var container = document.getElementById('flex-dynamic-gallery');
+	var images = {
+		'butterflies': ['butterfly-on-petal.jpg', 'butterfly-on-yellow-flower.jpg'],
+		'landscape': ['yacht.jpg','queenstown.jpg'],
+		'emma': ['emma-left.jpg', 'emma-right.jpg']
+	};
+	
+	function preloadImage (filename, group) {
+		var img = new Image();
+		img.onload = function () {
+			img.aspectRatio = img.naturalWidth / img.naturalHeight;
+			var fig = document.createElement('figure');
+			fig.dataset.group = group;
+			fig.appendChild(img);
+			container.appendChild(fig);
+		};
+		img.src = filename;
+		img.alt = "";
+	}
+
+	function loadImages () {
+
+		for (var group in images) {
+			img = images[group];
+			for (var i = 0; i < img.length; i++) {
+				var filename = './images/' + img[i];
+				preloadImage(filename, group);
+			}
+		}
+	}
+
+	function fitFlex () {
+		var flexGroup = document.querySelectorAll("figure");
+		var flexArray = Array.prototype.slice.call(flexGroup, 0);
+		flexArray.sort(function (a, b) {
+			imageAspectRatioA = a.firstElementChild.aspectRatio;
+			imageAspectRatioB = b.firstElementChild.aspectRatio;
+			if (imageAspectRatioA < imageAspectRatioB) { return 1;}
+			if (imageAspectRatioA > imageAspectRatioB) { return -1;}
+			return 0;
+		});
+		var widest = flexArray[0].firstElementChild.aspectRatio;
+		var smallestWidth = '300';
+		flexArray.forEach(function (box) {
+			var flex = 1 / (widest / box.firstElementChild.aspectRatio);
+			if (flex == 0) { flex = 1;}
+			boxWidth = smallestWidth * flex;
+			box.style.cssText = "flex: " + flex + "; min-width: " + boxWidth + "px;";
+		});
+	}
+
+	loadImages();
+	window.addEventListener("load",function () {
+		fitFlex();
+		var container = document.querySelector("#flex-dynamic-gallery");	
+		var dropdown = document.createElement('select');
+		dropdown.id = 'categories';
+		var dropdownLabel = document.createElement('label');
+		dropdownLabel.for = 'categories';
+		dropdownLabel.innerHTML = 	'Show : ';	
+		var array = container.getElementsByTagName('figure'),
+			selectionbar = document.getElementById('selectionbar'),
+			categories = [];
+		
+		for (var i = 0; i < array.length; i++) {
+			categories[i] = array[i].dataset.group;	
+		}
+
+		var unique = categories.filter(function (item, i, ar) {
+			return ar.indexOf(item) === i;
+		});
+		unique.reverse();
+		unique.unshift("all");
+
+
+		unique.forEach(buildDropDown);
+		selectionbar.appendChild(dropdownLabel);
+		selectionbar.appendChild(dropdown);
+
+		function buildDropDown (name, index, array) {
+			var opt = document.createElement('option');
+			opt.value = name;
+			opt.innerHTML = name;
+
+			dropdown.appendChild(opt);
+		}	
+
+		dropdown.onchange = function () {
+			if (this.value == "all") {
+				for (var i = 0; i < array.length; i++) {
+					array[i].classList.remove("dimish");
+				}			
+			} else {
+				var hide = document.querySelectorAll('#flex-dynamic-gallery figure:not([data-group="' + this.value + '"])');
+				for (var i = 0; i < hide.length; i++) {
+					hide[i].classList.add('dimish');
+				}
+				var show = document.querySelectorAll('#flex-dynamic-gallery figure[data-group="' + this.value + '"]');
+				for (var i = 0; i < show.length; i++) {
+					show[i].classList.remove('dimish');
+				}
+			}
+		}
+	});
+
+
+</script>
+</html>
