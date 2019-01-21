@@ -1,0 +1,50 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	margin: 0;
+} 
+
+#image-slider {
+	position: relative;
+	display: inline-block;
+	line-height: 0;
+	margin: 0;
+}
+
+#image-slider > figure {
+	position: absolute;
+	margin: 0;
+	top: 0; bottom: 0; left: 0;
+	width: 25px;
+	max-width: 100%;
+	overflow: hidden;
+	resize: horizontal;
+}
+
+#image-slider > figure::before {
+	content: '';	
+	position: absolute;
+	right: 0; bottom: 0;
+	width: 13px; height: 13px;
+	padding: 2px;
+	background: linear-gradient(-45deg, white 50%, transparent 0);
+	background-clip: content-box;
+	cursor: ew-resize;
+	-webkit-filter: drop-shadow(0 0 2px black);
+	filter: drop-shadow(0 0 2px black);
+}
+
+#image-slider img {
+	user-select: none;
+	max-width: 400px;
+}
