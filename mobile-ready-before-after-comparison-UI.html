@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Mobile Ready Before After Comparison UI</title>
+	<link rel="stylesheet" href="css/mobile-ready-before-after-comparison-UI.css">
+</head>
+<body>
+	<div id="inked-painted">
+		<img src="images/inked-panel.png" id="inked" alt="">
+		<div id="colored"></div>
+	</div>
+</body>
+<script>
+	var inkbox = document.getElementById('inked-painted'),
+		colorbox = document.getElementById('colored'),
+		fillerImage = document.getElementById('inked');
+
+		inkbox.addEventListener('mousemove', tracklocation, false);
+		inkbox.addEventListener('touchstart', tracklocation, false);
+		inkbox.addEventListener('touchmove', tracklocation, false);
+
+
+		function tracklocation (e) {
+			var rect = fillerImage.getBoundingClientRect();
+			var position = ((e.pageX - rect.left) / fillerImage.offsetWidth)*100;
+			if (position <= 100) {
+				colorbox.style.width = position + "%";
+			}
+		}
+</script>
+</html>

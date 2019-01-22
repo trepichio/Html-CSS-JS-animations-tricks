@@ -1,0 +1,40 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+} 
+
+div#inked-painted {
+	position: relative;
+	font-size: 0;
+	-ms-touch-action: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+div#inked-painted img {
+	width: 100%;
+	height: auto;
+}
+
+div#colored {
+	background-image: url('../images/colored-panel.jpg');
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%;
+	width: 50%;
+	background-size: cover;
+}
+
+div#inked-painted:hover {
+	cursor: col-resize;
+}
