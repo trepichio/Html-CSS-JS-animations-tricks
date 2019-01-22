@@ -30,11 +30,11 @@ div#colored {
 	background-image: url('../images/colored-panel.jpg');
 	position: absolute;
 	top: 0; left: 0;
-	height: 100%;
-	width: 50%;
+	height: 50%;
+	width: 100%;
 	background-size: cover;
 }
 
 div#inked-painted:hover {
-	cursor: col-resize;
+	cursor: row-resize;
 }

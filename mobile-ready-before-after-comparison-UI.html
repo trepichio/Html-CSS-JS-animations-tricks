@@ -24,9 +24,9 @@
 
 		function tracklocation (e) {
 			var rect = fillerImage.getBoundingClientRect();
-			var position = ((e.pageX - rect.left) / fillerImage.offsetWidth)*100;
+			var position = ((e.pageY - rect.top) / fillerImage.offsetHeight)*100;
 			if (position <= 100) {
-				colorbox.style.width = position + "%";
+				colorbox.style.height = position + "%";
 			}
 		}
 </script>
