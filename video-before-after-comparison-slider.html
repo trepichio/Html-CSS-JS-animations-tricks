@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Video Before After Comparison Slider</title>
+	<link rel="stylesheet" href="css/video-before-after-comparison-slider.css">
+</head>
+<body>
+	<div id="video-compare-container">
+		<video loop autoplay poster='images/dirty.jpg'>
+			<source src="videos/floodplain-dirty.mp4">
+		</video>
+		<div id="video-clipper">
+			<video loop autoplay poster="/images/clean.jpg">
+				<source src="videos/floodplain-clean.mp4">
+			</video>
+		</div>
+	</div>
+</body>
+<script>
+	var videoContainer = document.getElementById('video-compare-container'),
+		videoClipper = document.getElementById('video-clipper'),
+		clippedVideo = videoClipper.getElementsByTagName('video')[0];
+
+		 videoContainer.addEventListener('mousemove', tracklocation, false);
+		 videoContainer.addEventListener('touchstart', tracklocation, false);
+		 videoContainer.addEventListener('touchmove', tracklocation, false);
+
+
+		function tracklocation (e) {
+			var rect = videoContainer.getBoundingClientRect();
+			var position = ((e.pageX - rect.left) / videoContainer.offsetWidth)*100;
+			if (position <= 100) {
+				videoClipper.style.width = position + "%";
+				clippedVideo.style.width = ((100/position)*100)+"%";
+				clippedVideo.style.zIndex = 3;
+			}
+		}
+</script>
+</html>
