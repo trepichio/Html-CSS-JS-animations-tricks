@@ -1,0 +1,39 @@
+@keyframes reveal {
+	to {
+		opacity: 1;
+	}
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+} 
+
+.shuffle {
+	min-height: 100vh;
+	position: relative;
+}
+
+.shuffle img {
+	width: 33%;
+	opacity: 0;
+	transform: scale(1.3);
+}
+
+.reveal img {
+	animation: reveal 1s 1s forwards;
+}
+
+.expose {
+	border: 1.4rem solid #eee;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Random Stacked Images With Web Animation API and Progressive JS</title>
+	<link rel="stylesheet" href="css/random-stacked-images-with-web-animation-API-and-progressive-JS.css">
+</head>
+<body>
+	<div class="shuffle reveal">
+		<img src="images/calgary-bridge-2013.jpg" alt="">
+		<img src="images/photoshop-face-before.jpg" alt="">
+		<img src="images/emma-bottom-flipped.jpg" alt="">
+		<img src="images/butterfly-on-petal.jpg" alt="">
+		<img src="images/lake-tekapo.jpg" alt="">
+		<img src="images/blue-butterfly.jpg" alt="">
+	</div>
+</body>
+<script>
+	var reveal = document.querySelector('.reveal');
+	reveal.classList.remove('reveal');
+	var revealedImages = document.querySelectorAll('img'),
+		i = 1;
+
+	function getRandom (min, max) {
+		return Math.random() * (max - min) + min;
+	}
+
+	Array.prototype.forEach.call(revealedImages, function (photo) {
+		setTimeout(function () {
+			photo.style.position = "absolute";
+			photo.style.width = getRandom(33,45)+"%";
+			photo.style.left = getRandom(-5,65)+"%";
+			photo.style.top = getRandom(-6,60)+"vh";
+			photo.classList.add("expose");
+			var animate = photo.animate(
+			[
+				{
+					opacity: '0',
+					transform: 'rotate('+getRandom(-12,12)+'deg) scale(1.2)',
+					boxShadow: '0 0 12px 12px rgba(0, 0, 0, .3)'
+				},
+				{
+					opacity: '1',
+					transform: 'rotate('+getRandom(-8,8)+'deg)',
+					boxShadow: '0 0 6px 6px rgba(0, 0, 0, .3)'
+				}
+			], {
+					duration: 2000,
+					fill: 'forwards'
+				}
+			);
+		}, 1800*i)
+		i++;
+	});
+</script>
+</html>
