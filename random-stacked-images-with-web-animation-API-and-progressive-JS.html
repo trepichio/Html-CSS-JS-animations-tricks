@@ -20,7 +20,8 @@
 	var reveal = document.querySelector('.reveal');
 	reveal.classList.remove('reveal');
 	var revealedImages = document.querySelectorAll('img'),
-		i = 1;
+		i = 1,
+		zMax = 0;
 
 	function getRandom (min, max) {
 		return Math.random() * (max - min) + min;
@@ -69,6 +70,7 @@
 		//get the mouse cursor position at startup
 		pos3 = e.clientX;
 		pos4 = e.clientY;
+		if(zMax == 0 || zMax > this.style.zIndex) this.style.zIndex = ++zMax;
 		document.onmouseup = closeDragElement;
 		document.onmousemove = elementDrag;
 	}
