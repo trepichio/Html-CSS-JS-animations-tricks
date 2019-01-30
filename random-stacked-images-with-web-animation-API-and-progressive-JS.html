@@ -64,37 +64,37 @@
 
 		el.onmousedown = dragMouseDown;
 
-	function dragMouseDown (e) {
-		e = e || window.event;
-		e.preventDefault();
-		//get the mouse cursor position at startup
-		pos3 = e.clientX;
-		pos4 = e.clientY;
-		if(zMax == 0 || zMax > this.style.zIndex) this.style.zIndex = ++zMax;
-		document.onmouseup = closeDragElement;
-		document.onmousemove = elementDrag;
+		function dragMouseDown (e) {
+			e = e || window.event;
+			e.preventDefault();
+			//get the mouse cursor position at startup
+			pos3 = e.clientX;
+			pos4 = e.clientY;
+			if(zMax == 0 || zMax > this.style.zIndex) this.style.zIndex = ++zMax;
+			document.onmouseup = closeDragElement;
+			document.onmousemove = elementDrag;
+		}
+
+		function elementDrag (e) {
+			e = e || window.event;
+			e.preventDefault();
+
+			//calc new cursor position
+			pos1 = pos3 - e.clientX;
+			pos2 = pos4 - e.clientY;
+			pos3 = e.clientX;
+			pos4 = e.clientY;
+
+			//set new position
+			el.style.top = (el.offsetTop - pos2) + "px";
+			el.style.left = (el.offsetLeft - pos1) + "px";
+		}
+
+		function closeDragElement () {
+			//stop moving when mouse button is released
+			document.onmouseup = null;
+			document.onmousemove = null;
+		}
 	}
-
-	function elementDrag (e) {
-		e = e || window.event;
-		e.preventDefault();
-
-		//calc new cursor position
-		pos1 = pos3 - e.clientX;
-		pos2 = pos4 - e.clientY;
-		pos3 = e.clientX;
-		pos4 = e.clientY;
-
-		//set new position
-		el.style.top = (el.offsetTop - pos2) + "px";
-		el.style.left = (el.offsetLeft - pos1) + "px";
-	}
-
-	function closeDragElement () {
-		//stop moving when mouse button is released
-		document.onmouseup = null;
-		document.onmousemove = null;
-	}
-}
 </script>
 </html>
