@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Auto-generated Image Captions with Progressive JS</title>
+	<link rel="stylesheet" href="css/auto-generated-image-captions-with-progressive-JS.css">
+</head>
+<body>
+	<div id="autocaption">
+		<img src="images/pink-milford-sound.jpg" alt="Photograph of Pink Milford">
+		<img src="images/milky-blue-lagoon.jpg" alt="Photograph of Milky Blue Lagoon">
+		<img src="images/lake-tekapo.jpg" alt="Photograph of Lake Tekapo">
+	</div>
+</body>
+<script>
+	var images = document.querySelectorAll("#autocaption img"),
+		L = images.length,
+		fig = document.createElement('figure'),
+		who, temp;
+
+	while(L) {
+		temp = fig.cloneNode(false);
+		who = images[--L];
+		caption = who.getAttribute('alt');
+		who.parentNode.insertBefore(temp, who);
+		content = document.createElement('figcaption');
+		content.innerHTML = caption.substring(13);
+		temp.appendChild(who);
+		temp.appendChild(content);
+	}
+
+</script>
+</html>

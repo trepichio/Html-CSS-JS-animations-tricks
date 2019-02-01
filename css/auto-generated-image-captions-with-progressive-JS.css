@@ -1,0 +1,39 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+} 
+
+div#autocaption > * {
+	margin: 0;
+	padding: 0;
+	width: 27%;
+	border: 7px solid white;
+	margin: 10px;
+	background: #fff;
+	display: inline-block;
+	-webkit-box-shadow: 0 10px 8px rgba(0,0,0,.2);
+	box-shadow: 0 10px 8px rgba(0,0,0,.2);
+}
+
+div#autocaption figure img {
+	width: 100%;
+	height: auto;
+}
+
+div#autocaption figcaption {
+	padding: 5px;
+}
+
+div#autocaption figcaption:first-letter {
+	text-transform: uppercase;
+}

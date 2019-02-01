@@ -1,0 +1,73 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+$linkcolor: #333;
+$linkhighlight: #fff;
+
+body {
+	font-size: 1.6rem;
+	font-family: AVenir, monospace;
+} 
+
+.tabbed-navigation {
+  background: #ccc;
+  font-size: 0;
+  a {
+    text-decoration: none;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 2rem;
+    transition: .3s background;
+    transition: 1s transform;
+    color: $linkcolor;
+    @for $i from 1 through 5 {
+      $rot: $i * 72;
+	    &:nth-child(#{$i}){
+	      background: hsl($rot,100%,50%);
+	    }
+	}
+    span {
+      font-weight: bolder;
+    }
+
+    &:hover {
+      background: $linkcolor;
+      color: $linkhighlight;
+      transform: scale(0.8);
+    }
+  }
+}
+
+.blockborder {
+  border: 1px solid #333;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.blockhighlight {
+  @extend .blockborder;
+  background: hsl(20, 80%,80%);
+}
+
+article {
+  display: inline-block;
+  margin: 1rem;
+  width: 27%;
+  background: #fee
+    img {
+      width: 100%;
+      height: auto;
+    }
+  
+    p {
+      margin: 2rem;
+    }
+}

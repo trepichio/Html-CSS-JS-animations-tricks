@@ -1,0 +1,74 @@
+/* line 1, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0; }
+
+/* line 8, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+/* line 15, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+body {
+  font-size: 1.6rem;
+  font-family: AVenir, monospace; }
+
+/* line 20, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+.tabbed-navigation {
+  background: #ccc;
+  font-size: 0; }
+  /* line 23, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+  .tabbed-navigation a {
+    text-decoration: none;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 2rem;
+    transition: .3s background;
+    transition: 1s transform;
+    color: #333; }
+    /* line 33, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+    .tabbed-navigation a:nth-child(1) {
+      background: #ccff00; }
+    /* line 33, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+    .tabbed-navigation a:nth-child(2) {
+      background: #00ff66; }
+    /* line 33, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+    .tabbed-navigation a:nth-child(3) {
+      background: #0066ff; }
+    /* line 33, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+    .tabbed-navigation a:nth-child(4) {
+      background: #cc00ff; }
+    /* line 33, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+    .tabbed-navigation a:nth-child(5) {
+      background: red; }
+    /* line 37, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+    .tabbed-navigation a span {
+      font-weight: bolder; }
+    /* line 41, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+    .tabbed-navigation a:hover {
+      background: #333;
+      color: #fff;
+      transform: scale(0.8); }
+
+/* line 49, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+.blockborder, .blockhighlight {
+  border: 1px solid #333;
+  border-radius: 2px;
+  overflow: hidden; }
+
+/* line 55, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+.blockhighlight {
+  background: #f5bea3; }
+
+/* line 60, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+article {
+  display: inline-block;
+  margin: 1rem;
+  width: 27%;
+  background: #fee img;
+    background-width: 100%;
+    background-height: auto; }
+  /* line 70, /home/jtrepichio/webDev/Mytest/scss/test-css.scss */
+  article p {
+    margin: 2rem; }
