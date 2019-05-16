@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100);
+@font-face { 
+font-family: Metropolis;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/Metropolis_1920.otf);
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), #000), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/coal-mine-beringen.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	min-height: 200vh;
+	margin: 2rem;
+	color: #fff;
+	font-family: Roboto slab, sans-serif;
+	line-height: 2;
+} 
+
+h1 {
+	font-family: Metropolis, sans-serif;
+	text-align: center;
+	margin-top: 2rem;
+	font-size: 8rem;
+}
+
+#gearbox {
+	display: flex;
+	justify-content: space-between;
+}
+
+#leftgear, #rightgear {
+	position: fixed;
+	width: 15vw;
+	max-width: 20%;
+	height: auto;
+}
+
+#rightgear {
+	right: 2rem;
+}
+
+main {
+	text-align: justify;
+	width: 60vw;
+	margin: 0 auto;
+	max-width: 800px;
+	font-size: 2rem;
+}
+
+@media all and (max-width: 1000px) {
+	h1 { font-size: 10vw; }
+}
+
+@media all and (max-width: 800px) {
+	main { font-size: 1.6rem; }
+}
+
+@media all and (max-width: 500px) {
+	h1 { font-size: 12vw; }
+	main { width: 100%; }
+	img { display: none; }
+}

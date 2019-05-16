@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rotate Elements On Scroll</title>
+	<link rel="stylesheet" type="text/css" href="css/rotate-elements-on-scroll.css">
+</head>
+<body>
+	<div id="gearbox">
+		<img src="svg/gear.svg" id="leftgear"><img src="svg/gear.svg" id="rightgear">
+	<main>
+		<h1>Website title</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>valeraldehyde skillfulness missionizer paulie unmockingly facula tapermaker premanifest aeromancy cuprodescloizite abdominovesical disciplinarian cyrtosis intrepidness hippish Torsten subdiaconal Michoacano partisanism chainless Tamarix photoelectrically outfool prevene</p>
+		<p>Antiguan resistlessness countertranslation aconital snobocrat phylarchic nephropathy unsaveable hansel underranger Drimys Ramaite exterminist moratoria straitlacing improvisatorize stathmoi unrefused visitorship Petrarchistical Sivaist periodically squamozygomatic parvolin</p>
+		<p>dawdle unspoiled knowledgement inanity charmlessly cooky redound outshake overreadily horsepower pulsometer microbalance lestiwarite twirler illimitedly microlevel monument monopneumonian funduline paragrapher undervaluinglike leavenless tremolist revolvency</p>
+		<p>plaint patinous protozoological Majoristic casemate trisyllable Salva unpruned testamentary chott alcarraza unexculpably flixweed beseechingly aftersound benzophthalazine sleeveless lithiasis intrigue porulose precontroversy expirate torticone blenniiform</p>
+	</main>
+	</div>
+<script>
+	;(function () {
+		let throttle = function (type, name, obj) {
+			var obj = obj || window;
+			let running = false;
+			let func = function () {
+				if (running) { return; }
+				running = true;
+				requestAnimationFrame(function () {
+					obj.dispatchEvent(new CustomEvent(name));
+					running = false;
+				});
+			};
+			obj.addEventListener(type, func);
+		};
+		throttle("scroll", "optimizedScroll");
+	})();
+
+	var leftgear = document.querySelector('#leftgear'),
+		rightgear = document.querySelector('#rightgear');
+
+	window.addEventListener('optimizedScroll', () => {
+		leftgear.style.transform = 	"rotate("+ window.pageYOffset +"deg)";
+		rightgear.style.transform =	"rotate(-"+ window.pageYOffset +"deg)";
+	})
+</script>
+</body>
+</html>
