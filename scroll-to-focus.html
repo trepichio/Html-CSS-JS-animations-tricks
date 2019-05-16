@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scroll-to-Focus Effect For Hero Images</title>
+	<link rel="stylesheet" type="text/css" href="css/scroll-to-focus.css">
+</head>
+<body>
+	<article>
+		<header><img src="http://placekitten.com/1024/960" alt="Four cats together"></header>
+		<h1>Article Title</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>entomologic Altamira warnish telfairic yttrialite emporeutic nonappointment brunneous Dichter interpage steermanship nonchallenger Laodicean sheathbill Xenarthra Paulinize soterial rescore Mosgu sapphirine noselite Clausilia intermodillion prizable</p>
+		<p>barratrous stylist Mehrdad tragicoromantic raise incrassated posh system precautional meteoroid cosubject rebetray overchargement earring glycerate agomphious intraspinal knot anchusin alimentum angriness griffado sumptuosity sprighty</p>
+		<p>demilance biocatalyst Dinichthys gnathonically mornings cyclometry basidiosporous sulphocarbolate remigrate spicer capote othmany polycentral recreatory cholelithiasis megaloplastocyte cratometric shadowiness Squalida deweylite isopropylamine palladion Sadducism pluripotent</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+	</article>
+<script>
+	window.onscroll = () => {
+		let headerImg = document.querySelector('article header img'),
+			headerImgOffset = headerImg.getBoundingClientRect(),
+			imgTop = headerImgOffset.top,
+			imgBottom = headerImgOffset.bottom,
+			imgHeight = headerImg.offsetHeight,
+			viewportHeight = document.documentElement.clientHeight,
+			topEffectStart = Math.abs((viewportHeight - imgHeight)/5);
+
+		if (imgTop < topEffectStart && imgBottom > 0) {
+			let blueFactor = Math.abs(imgTop / 100),
+				scaleFactor = 1 + Math.abs(imgTop / 1000);
+			headerImg.style.webkitFilter = "blur(" + blueFactor + "px)";
+			headerImg.style.webkitTransform = "scale("+scaleFactor+")";
+			headerImg.style.transform = "scale("+scaleFactor+")";
+
+		}
+	};
+</script>
+</body>
+</html>

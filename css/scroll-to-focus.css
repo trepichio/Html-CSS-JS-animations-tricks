@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	min-height: 200vh;
+	margin: 2rem;
+} 
+
+article {
+	margin: 0 auto;
+	width: 60%;
+}
+
+header {
+	overflow: hidden;
+	font-size: 0;
+}
+
+h1 {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-size: 5vw;
+	text-align: center;
+	position: relative;
+	top: -9vw;
+	color: #fff;
+}
+
+article header img {
+	width: 100%;
+	height: auto;
+}
+
+p {
+	position: relative;
+	top: -9vw;
+	font-family: Raleway, sans-serif;
+	text-align: justify;
+	font-size: 1.8rem;
+	line-height: 1.6;
+
+}
