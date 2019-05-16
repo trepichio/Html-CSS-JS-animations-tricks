@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Calluna';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/CallunaSansRegular.otf') format('opentype');
+}
+
+html {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: Calluna, Arial, sans-serif;
+	background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,0)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/times-square-perspective.jpg);
+	background-repeat: no-repeat;	
+	background-attachment: fixed !important;
+	-webkit-background-size: 100% !important;
+	background-size: 100% !important;
+	background-position: center top !important;
+	padding: 1rem; padding-top: 45%;
+	color: #fff;
+}
+
+h1 {
+	position: absolute;
+	top: 10px;
+	color: #fff;
+	font-size: 4rem; font-weight: 100;
+	font-family: Verdana, Geneva, sans-serif;
+	line-height: 1;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+h2 {
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+
+h2, span {
+	font-weight: bold;
+	font-size: 2.5rem;
+	text-align: center;
+	display: block;
+}
+
+span {
+	font-size: 3rem;
+	margin: 0;
+}
+
+p {
+	line-height: 1.6;
+	text-align: left;
+	width: 70%;
+	margin: 0 auto;
+	color: #000;
+	font-size: 1.6rem;
+}
