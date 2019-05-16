@@ -1,0 +1,73 @@
+@font-face {
+	font-family: 'Sucrose Bold Two';
+	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sucrose.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'IM Fell French Canon Pro';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/im-fell-french-canon-pro.woff2') format('woff2');
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	margin: 0;
+} 
+
+header {
+	font-family: 'Sucrose Bold Two';
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mountain-range.jpg) no-repeat;
+	/* full image's height divided by width */
+	padding-top: 61.73333333%; 
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+/* 
+The PNG image is 45.8% of the width of the full-size version of the image. 
+It’s placed at the right of the <header>, and styled appropriately:
+ */
+header img {
+	position: absolute;
+	top: 0; right: 0;
+	width: 45.8%;
+}
+
+header h1 {
+	position: fixed;
+	top: 2rem; right: 2rem;
+	font-size: 12vw;
+	line-height: .8;
+	margin-top: 0;
+	text-align: center;
+}
+
+header h1 span {
+	display: block;
+	font-size: 8.75vw;
+}
+
+main {
+	font-family: 'IM Fell French Canon Pro';
+	/* it is automatically layered higher */
+	position: relative; 
+	/* provide it with a white background and border to ensure that it covers all the way to the bottom edge */
+	background-color: #fff;
+	border: 1px solid #fff;
+	padding: 2rem 25%;
+	line-height: 1.6;
+	font-size: 2.9rem;
+}
+
+@media all and (max-width: 400px) {
+    main { padding: 2rem; }
+}
