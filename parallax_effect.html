@@ -12,10 +12,8 @@
 		<img src="http://thenewcode.com/assets/images/pagoda-surrounded-by-trees.jpg" alt="">
 	</div>
 	<script>
-		window.onscroll = function() {
-			if (window.pageYOffset > 0) {		
-				document.getElementById("parallax").style.fontSize = (window.pageYOffset/20)*.1+"em";
-			}
+		window.onscroll = () => {
+			window.pageYOffset > 0 && (document.querySelector("#parallax").style.fontSize = (window.pageYOffset/20)*.1+"em")
 		}
 	</script>
 </body>
