@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+/* line 3, /home/jtrepichio/webDev/Mytest/scss/parallax.scss */
+body {
+  margin: 0;
+  font-family: Oswald, Avenir, sans-serif;
+  min-height: 200vh;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/blurred-background-small.jpg);
+  background-size: cover;
+  background-attachment: fixed; }
+
+/* line 12, /home/jtrepichio/webDev/Mytest/scss/parallax.scss */
+#parallax {
+  padding-top: 75.5%;
+  overflow: hidden;
+  position: relative;
+  font-size: .1em; }
+  /* line 18, /home/jtrepichio/webDev/Mytest/scss/parallax.scss */
+  #parallax * {
+    position: absolute; }
+  /* line 19, /home/jtrepichio/webDev/Mytest/scss/parallax.scss */
+  #parallax img {
+    width: 40%;
+    height: auto;
+    box-shadow: 0 0.2em 8px 4px rgba(0, 0, 0, 0.5); }
+  /* line 25, /home/jtrepichio/webDev/Mytest/scss/parallax.scss */
+  #parallax h1 {
+    font-size: 3rem;
+    color: #fff;
+    z-index: 2;
+    top: calc(50% - 3rem/2);
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0.2em 5px rgba(0, 0, 0, 0.4);
+    position: fixed; }
+  /* line 36, /home/jtrepichio/webDev/Mytest/scss/parallax.scss */
+  #parallax img:nth-of-type(1) {
+    left: 5%;
+    bottom: 22em; }
+  /* line 39, /home/jtrepichio/webDev/Mytest/scss/parallax.scss */
+  #parallax img:nth-of-type(2) {
+    left: 28%;
+    z-index: 3;
+    bottom: 8em; }
+  /* line 42, /home/jtrepichio/webDev/Mytest/scss/parallax.scss */
+  #parallax img:nth-of-type(3) {
+    left: 55%;
+    bottom: 12em; }

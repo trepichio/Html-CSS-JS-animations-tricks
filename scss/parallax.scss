@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+body {
+	margin: 0;
+	font-family: Oswald, Avenir, sans-serif;
+	min-height: 200vh;
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/blurred-background-small.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+} 
+
+#parallax {
+	padding-top: 75.5%;
+	overflow: hidden;
+	position: relative;
+	font-size: .1em;
+
+	* { position: absolute; }
+	img {
+		width: 40%;
+		height: auto;
+		box-shadow: 0 .2em 8px 4px rgba(0,0,0,.5);
+	}
+
+	h1 {
+		$fsize: 3rem;
+		font-size: $fsize;
+		color: #fff;
+		z-index: 2;
+		top: calc(50% - #{$fsize}/2); text-transform: uppercase;
+		width: 100%; text-align: center;
+		text-shadow: 0 .2em 5px rgba(0,0,0,.4);
+		position: fixed;
+	}
+
+	img:nth-of-type(1) {
+		left: 5%; bottom: 22em;
+	}
+	img:nth-of-type(2) {
+		left: 28%; z-index: 3; bottom: 8em;
+	}
+	img:nth-of-type(3) {
+		left: 55%; bottom: 12em;
+	}
+}

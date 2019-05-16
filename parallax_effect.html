@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parallax Effect</title>
+	<link rel="stylesheet" type="text/css" href="css/parallax.css">
+</head>
+<body>
+	<div id="parallax">
+		<h1>Simple EM Parallax Technique</h1>
+		<img src="http://thenewcode.com/assets/images/candles.jpg" alt="">
+		<img src="http://thenewcode.com/assets/images/cherry-tree.jpg" alt="">
+		<img src="http://thenewcode.com/assets/images/pagoda-surrounded-by-trees.jpg" alt="">
+	</div>
+	<script>
+		window.onscroll = function() {
+			if (window.pageYOffset > 0) {		
+				document.getElementById("parallax").style.fontSize = (window.pageYOffset/20)*.1+"em";
+			}
+		}
+	</script>
+</body>
+</html>
