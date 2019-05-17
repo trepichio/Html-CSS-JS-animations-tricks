@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smooth Scrool</title>
+	<link rel="stylesheet" type="text/css" href="css/smooth_scroll.css">
+</head>
+<body>
+	<div id="container">
+		<nav id="navLinks">
+			<a href="#s1">1</a>
+			<a href="#s2">2</a>
+			<a href="#s3">3</a>
+		</nav>
+		<main>
+			<section id="s1">
+				<h1>Chapter 1</h1><a href="#navLinks">go back to top ⤴</a>
+				<p>informative Alea megascope ganglioform operating afunction powwower youse unaffected rite archorrhea tensibleness Tesserants conduplicated dislike apocryphate cuticular from Desmarestia precocity homoeotypic utfangenethef Scolopendrellidae Serapis</p>
+				<p>isogenotype waxily dolman antidoron septane bottlebird porcelainization leapable breviradiate reregister Haematotherma hyperpnoea cytotrophy teak unquested Vishnuvite cueman elt Hausa mismenstruation vargueno Czechoslovakian gatewright Montana</p>
+				<p>chasmy unadvisability circuitman macrosporophyl realienate bepale bromothymol untrekked Ocyroidae roral ergatogyne unobjectional bixin Alix primogenitive perdicine unforgivableness dermostosis corrige unreasonableness panarthritis redipper predatory Rameses</p>
+				<p>iodination waddywood Lyrurus beavered scrutineer oversize wickerworker etypic Ipomoea morpholine fastidiousness apothegmatist film soapstone girba perichylous boozy hobble indite prewillingness belomancy Sulaib ophiology tusky</p>
+				<p>serpiginous semisocial dispreader malodor bonze scrivello homotropous monobromination hyperdemocracy luller phthalid Scleropages antluetic imperish greenfinch hypophosphorous pocilliform ringwall shippage goldwater Minervic hogrophyte quadratrix incorporatedness</p>
+			</section>
+			<section id="s2">
+				<h1>Chapter 2</h1><a href="#navLinks">go back to top ⤴</a>
+				<p>bayok triamine hydropultic telomitic vindictivolence junto unspeculatively unordinary unlobed anthropopsychism counterwarmth evalue dupedom dyspeptic cliency one cabinet hellier legionry viticetum persis trigynous sericicultural indigena</p>
+				<p>Leonid pennywinkle additional tuque astylar tripunctal rewardingly cheap treasurership Calchaquian growsome godpapa verrucous homeopathy vagulous quencher flatteringness palaeozoologist glucinum flandan stealthwise hinau unoiled uninfluential</p>
+				<p>chasmy unadvisability circuitman macrosporophyl realienate bepale bromothymol untrekked Ocyroidae roral ergatogyne unobjectional bixin Alix primogenitive perdicine unforgivableness dermostosis corrige unreasonableness panarthritis redipper predatory Rameses</p>
+				<p>iodination waddywood Lyrurus beavered scrutineer oversize wickerworker etypic Ipomoea morpholine fastidiousness apothegmatist film soapstone girba perichylous boozy hobble indite prewillingness belomancy Sulaib ophiology tusky</p>
+				<p>serpiginous semisocial dispreader malodor bonze scrivello homotropous monobromination hyperdemocracy luller phthalid Scleropages antluetic imperish greenfinch hypophosphorous pocilliform ringwall shippage goldwater Minervic hogrophyte quadratrix incorporatedness</p>
+			</section>
+			<section id="s3">
+				<h1>Chapter 3</h1><a href="#navLinks">go back to top ⤴</a>
+				<p>ferrate subdistinction liberationism palindromically enneaspermous Eulamellibranchia floodmark stator unubiquitous determine Shiitic stenochromy crocodilian cumulite hapteron unenervated lyretail successionless consecute Luffa unsuperfluous tormented stunning Latakia</p>
+				<p>undrape pseudopodiospore alnuin arquifoux foeless antitrades Pristis beeherd nefariousness healthily Alsinaceae embarkation undiminished undescript Bob hypomeron sparkishly axwise Polymnia piperonyl huskily Latinize repliant salfern</p>
+				<p>chasmy unadvisability circuitman macrosporophyl realienate bepale bromothymol untrekked Ocyroidae roral ergatogyne unobjectional bixin Alix primogenitive perdicine unforgivableness dermostosis corrige unreasonableness panarthritis redipper predatory Rameses</p>
+				<p>iodination waddywood Lyrurus beavered scrutineer oversize wickerworker etypic Ipomoea morpholine fastidiousness apothegmatist film soapstone girba perichylous boozy hobble indite prewillingness belomancy Sulaib ophiology tusky</p>
+				<p>serpiginous semisocial dispreader malodor bonze scrivello homotropous monobromination hyperdemocracy luller phthalid Scleropages antluetic imperish greenfinch hypophosphorous pocilliform ringwall shippage goldwater Minervic hogrophyte quadratrix incorporatedness</p>
+			</section>
+		</main>
+	</div>
+	<script>
+		let anchorLink = document.querySelector("#navLinks");
+		if (window.scrollTo) {
+			anchorLink.addEventListener('click', (e) => {
+				e.preventDefault();
+				let dest = document.querySelector('#' + e.target.href.split('#')[1]);
+				window.scrollTo({'top': dest.offsetTop, 'left': 0, 'behavior': 'smooth'});
+			});
+		}
+	</script>
+</body>
+</html>
