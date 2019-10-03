@@ -1,4 +1,4 @@
-# CSS tricks
+# Pure CSS and Progressive JS tricks
 
 This is a git repository for storing some CSS learning tricks, nothing more.
 Most of them are Pure CSS but some work with JS.
