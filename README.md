@@ -186,3 +186,5 @@ They are ***HTML files*** and can be **viewed directly in the browser**. So, use
 [tab-navigation bar](./tab_navigation.html)
 
 [wrapping text around CSS Shapes such as circular image](./wrapping-text-around-circular-image.html)
+
+That's all!
