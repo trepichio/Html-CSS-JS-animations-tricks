@@ -30,7 +30,7 @@
 		ranger.max = imgcount;
 		ranger.value = imgcount;
 
-	for (var i = 0; i < imgcount.length; i++) {
+	for (var i = 0; i < imgcount - 1; i++) {
 		var rotation = parseFloat(-92 + "." + (imgcount - i));
 		figs[i].style.transform = 'rotateX('+ rotation +'deg)';
 	}
