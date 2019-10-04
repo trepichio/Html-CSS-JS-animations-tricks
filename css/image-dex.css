@@ -11,7 +11,8 @@ html {
 
 body {
 	font-size: 1.6rem;
-} 
+	width: 90vh;
+}
 
 div#imgdex {
 	position: relative;
