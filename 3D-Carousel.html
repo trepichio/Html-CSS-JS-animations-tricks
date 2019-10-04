@@ -8,32 +8,24 @@
 	<link rel="stylesheet" href="css/3D-Carousel.css">
 </head>
 <body>
-	<div id="gallery">
-		<figure id="spinner">
-			<img src="images/wanaka-tree.jpg" alt="">
-			<img src="images/still-lake.jpg" alt="">
-			<img src="images/pink-milford-sound.jpg" alt="">
-			<img src="images/paradise.jpg" alt="">
-			<img src="images/morekai.jpg" alt="">
-			<img src="images/milky-blue-lagoon.jpg" alt="">
-			<img src="images/lake-tekapo.jpg" alt="">
-			<img src="images/milford-sound.jpg" alt="">
-		</figure>
-		<a href="#" style="float: left" accesskey="," tabindex="1" onfocus="galleryspin('-')" onclick="galleryspin('-')">◀</a>
-		<a href="#" style="float: right" accesskey="." tabindex="2" onfocus="galleryspin('')" onclick="galleryspin('')">▶</a>
+	<div class="carousel3D">
+		<div id="gallery" class="carousel-container">
+			<figure id="spinner" class="content-carousel ">
+				<figure class="shadow"><img src="images/wanaka-tree.jpg" alt=""></figure>
+				<figure class="shadow"><img src="images/still-lake.jpg" alt=""></figure>
+				<figure class="shadow"><img src="images/pink-milford-sound.jpg" alt=""></figure>
+				<figure class="shadow"><img src="images/paradise.jpg" alt=""></figure>
+				<figure class="shadow"><img src="images/morekai.jpg" alt=""></figure>
+				<figure class="shadow"><img src="images/milky-blue-lagoon.jpg" alt=""></figure>
+				<figure class="shadow"><img src="images/lake-tekapo.jpg" alt=""></figure>
+				<figure class="shadow"><img src="images/milford-sound.jpg" alt=""></figure>
+			</figure>
+		</div>
+		<!-- These controls don't show if content-carousel has spinner class (animation) -->
+		<a href="#" class="carousel3D-controls controls-left" accesskey="," tabindex="1">◀</a>
+		<a href="#" class="carousel3D-controls controls-right" accesskey="." tabindex="2">▶</a>
 	</div>
+	<!-- don't forget to add script and modify its path -->
+	<script src="./js/carousel3D.js"></script>
 </body>
-<script type="text/javascript">
-	var angle = 0;
-	function galleryspin(sign) {
-		spinner = document.querySelector('#spinner');
-		if (!sign) {
-			angle += 45;
-		} else {
-			angle -= 45;
-		}
-		spinner.setAttribute('style', '-webkit-transform: rotateY(' + angle + 'deg); transform: rotateY('+ angle + 'deg);');
-
-	}
-</script>
 </html>

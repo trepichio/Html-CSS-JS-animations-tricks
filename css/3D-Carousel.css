@@ -1,121 +1,241 @@
-html {
-	box-sizing: border-box;
-	font-size: 62.5%;
-	margin: 0;
-	padding: 0;
-}
+/* ====== HTML CSS BOX ====== */
+html, body {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0; }
 
 *, *::before, *::after {
-	box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 body {
-	font-size: 1.6rem;
-	background: #100000;
-} 
-a {
-	font-size: 4rem;
-	color: #fff;
-	line-height: 2;
-	text-decoration: none;
-	transition: color .6s
-	margin: 5%;
-	position: relative;
-}
+  font-size: 1.6rem; }
 
-a:hover {
-	color: hsla(0, 100%, 100%, 0.7);
-}
+.page-container {
+  width: 100%; }
 
-div#gallery {
-	perspective: 1200px;
-	padding-top: 10%;
-	font-size: 0;
-	margin-bottom: 3rem;
-	overflow: hidden;
-}
+/* Carousel3D Component */
+.carousel3D {
+  margin: 0 auto;
+  padding-top: 50px;
+  height: 600px;
+  width: 100%;
+  background-color: #6adecd;
+  box-sizing: border-box; }
 
-figure#spinner {
-	transform-style: preserve-3d;
-	min-height: 300px;
-	-webkit-transform-origin: 50% 50%;
-	transform-origin: 50% 50% -500px;
-	transition: 1s;
-}
+.carousel3D-title {
+  font-family: 'Allerta Stencil';
+  font-size: 62px;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 25%;
+  letter-spacing: 3px;
+  font-weight: 300; }
 
-figure#spinner img {
-	width: 40%;
-	max-width: 425px;
-	position: absolute;
-	left: 30%;
-	transform-origin: 50% 50%;
-	-webkit-transform-origin-z: -500px;
-	outline: 1px solid transparent;
-}
+.sub-heading {
+  padding-top: 50px;
+  font-size: 18px; }
 
-figure#spinner img:nth-child(1) {
-	transform: rotateY(0deg);
-}
+.sub-heading-two {
+  font-size: 15px; }
 
-figure#spinner img:nth-child(2) {
-	transform: rotateY(-45deg);
-}
+.sub-heading-three {
+  font-size: 13px; }
 
-figure#spinner img:nth-child(3) {
-	transform: rotateY(-90deg);
-}
+.sub-heading-four {
+  font-size: 11px; }
 
-figure#spinner img:nth-child(4) {
-	transform: rotateY(-135deg);
-}
+.sub-heading-five {
+  font-size: 9px; }
 
-figure#spinner img:nth-child(5) {
-	transform: rotateY(-180deg);
-}
+.sub-heading-six {
+  font-size: 7px; }
 
-figure#spinner img:nth-child(6) {
-	transform: rotateY(-225deg);
-}
+.sub-heading-seven {
+  font-size: 5px; }
 
-figure#spinner img:nth-child(7) {
-	transform: rotateY(-270deg);
-}
+.sub-heading-eight {
+  font-size: 3px; }
 
-figure#spinner img:nth-child(8) {
-	transform: rotateY(-315deg);
-}
+.sub-heading-nine {
+  font-size: 1px; }
 
-@media screen and (max-width: 800px) {
-	figure#spinner {
-		-webkit-transform-origin: 50% 50%;
-		transform-origin: 50% 50% -338px;
-	}
+.carousel-container {
+  margin: auto;
+  width: 190px;
+  perspective: 1200px;
+  position: relative;
+  padding-top: 80px; }
 
-	figure#spinner img {
-	-webkit-transform-origin-z: -338px;
-	}	
-}
+.carousel3D-controls {
+  font-size: 4rem;
+  color: #fff;
+  line-height: 2;
+  text-decoration: none;
+  transition: color .6s;
+  padding: 5%;
+  position: absolute; }
+  .carousel3D-controls:hover, .carousel3D-controls:focus {
+    color: #000; }
 
-@media screen and (max-width: 550px) {
-	figure#spinner {
-		-webkit-transform-origin: 50% 50%;
-		transform-origin: 50% 50% -218px;
-	}
+.controls-left {
+  left: 0; }
+  .controls-left:hover {
+    animation: bounceLeft 0.5s infinite alternate; }
 
-	figure#spinner img {
-		-webkit-transform-origin-z: -218px;
-	}		
-}
+.controls-right {
+  right: 0; }
+  .controls-right:hover {
+    animation: bounceRight 0.5s infinite alternate; }
 
-@media screen and (max-width: 400px) {
-	figure#spinner {
-		-webkit-transform-origin: 50% 50%;
-		transform-origin: 50% 50% -200px;
-	}
+.content-carousel {
+  width: 100%;
+  position: absolute;
+  float: right;
+  transform-style: preserve-3d; }
 
+.spinner {
+  animation: rotar 15s infinite linear; }
 
-	figure#spinner img {
-		-webkit-transform-origin-z: -200px;
-	}	
+.content-carousel:hover {
+  animation-play-state: paused;
+  cursor: pointer; }
 
-}
+.content-carousel figure {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #3b444b;
+  overflow: hidden;
+  position: absolute; }
+
+.shadow {
+  position: absolute;
+  box-shadow: 0px 0px 20px 0px #000;
+  border-radius: 1px; }
+
+.content-carousel img {
+  image-rendering: auto;
+  transition: all 300ms;
+  width: 100%;
+  height: 100%; }
+
+.content-carousel img:hover {
+  transform: scale(1.2);
+  transition: all 300ms; }
+
+@keyframes rotar {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(360deg); } }
+
+@keyframes bounceLeft {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    transform: translate3d(20px, 0, 0); } }
+
+@keyframes bounceRight {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    transform: translate3d(-20px, 0, 0); } }
+
+.content-carousel figure:nth-child(1) {
+  transform: rotateY(0deg) translateZ(-200px); }
+  @media screen and (min-width: 401.2px) {
+    .content-carousel figure:nth-child(1) {
+      transform: rotateY(0deg) translateZ(-218px); } }
+  @media screen and (min-width: 550.2px) {
+    .content-carousel figure:nth-child(1) {
+      transform: rotateY(0deg) translateZ(-300px); } }
+  @media screen and (min-width: 801.2px) {
+    .content-carousel figure:nth-child(1) {
+      transform: rotateY(0deg) translateZ(-338px); } }
+
+.content-carousel figure:nth-child(2) {
+  transform: rotateY(-45deg) translateZ(-200px); }
+  @media screen and (min-width: 401.2px) {
+    .content-carousel figure:nth-child(2) {
+      transform: rotateY(-45deg) translateZ(-218px); } }
+  @media screen and (min-width: 550.2px) {
+    .content-carousel figure:nth-child(2) {
+      transform: rotateY(-45deg) translateZ(-300px); } }
+  @media screen and (min-width: 801.2px) {
+    .content-carousel figure:nth-child(2) {
+      transform: rotateY(-45deg) translateZ(-338px); } }
+
+.content-carousel figure:nth-child(3) {
+  transform: rotateY(-90deg) translateZ(-200px); }
+  @media screen and (min-width: 401.2px) {
+    .content-carousel figure:nth-child(3) {
+      transform: rotateY(-90deg) translateZ(-218px); } }
+  @media screen and (min-width: 550.2px) {
+    .content-carousel figure:nth-child(3) {
+      transform: rotateY(-90deg) translateZ(-300px); } }
+  @media screen and (min-width: 801.2px) {
+    .content-carousel figure:nth-child(3) {
+      transform: rotateY(-90deg) translateZ(-338px); } }
+
+.content-carousel figure:nth-child(4) {
+  transform: rotateY(-135deg) translateZ(-200px); }
+  @media screen and (min-width: 401.2px) {
+    .content-carousel figure:nth-child(4) {
+      transform: rotateY(-135deg) translateZ(-218px); } }
+  @media screen and (min-width: 550.2px) {
+    .content-carousel figure:nth-child(4) {
+      transform: rotateY(-135deg) translateZ(-300px); } }
+  @media screen and (min-width: 801.2px) {
+    .content-carousel figure:nth-child(4) {
+      transform: rotateY(-135deg) translateZ(-338px); } }
+
+.content-carousel figure:nth-child(5) {
+  transform: rotateY(-180deg) translateZ(-200px); }
+  @media screen and (min-width: 401.2px) {
+    .content-carousel figure:nth-child(5) {
+      transform: rotateY(-180deg) translateZ(-218px); } }
+  @media screen and (min-width: 550.2px) {
+    .content-carousel figure:nth-child(5) {
+      transform: rotateY(-180deg) translateZ(-300px); } }
+  @media screen and (min-width: 801.2px) {
+    .content-carousel figure:nth-child(5) {
+      transform: rotateY(-180deg) translateZ(-338px); } }
+
+.content-carousel figure:nth-child(6) {
+  transform: rotateY(-225deg) translateZ(-200px); }
+  @media screen and (min-width: 401.2px) {
+    .content-carousel figure:nth-child(6) {
+      transform: rotateY(-225deg) translateZ(-218px); } }
+  @media screen and (min-width: 550.2px) {
+    .content-carousel figure:nth-child(6) {
+      transform: rotateY(-225deg) translateZ(-300px); } }
+  @media screen and (min-width: 801.2px) {
+    .content-carousel figure:nth-child(6) {
+      transform: rotateY(-225deg) translateZ(-338px); } }
+
+.content-carousel figure:nth-child(7) {
+  transform: rotateY(-270deg) translateZ(-200px); }
+  @media screen and (min-width: 401.2px) {
+    .content-carousel figure:nth-child(7) {
+      transform: rotateY(-270deg) translateZ(-218px); } }
+  @media screen and (min-width: 550.2px) {
+    .content-carousel figure:nth-child(7) {
+      transform: rotateY(-270deg) translateZ(-300px); } }
+  @media screen and (min-width: 801.2px) {
+    .content-carousel figure:nth-child(7) {
+      transform: rotateY(-270deg) translateZ(-338px); } }
+
+.content-carousel figure:nth-child(8) {
+  transform: rotateY(-315deg) translateZ(-200px); }
+  @media screen and (min-width: 401.2px) {
+    .content-carousel figure:nth-child(8) {
+      transform: rotateY(-315deg) translateZ(-218px); } }
+  @media screen and (min-width: 550.2px) {
+    .content-carousel figure:nth-child(8) {
+      transform: rotateY(-315deg) translateZ(-300px); } }
+  @media screen and (min-width: 801.2px) {
+    .content-carousel figure:nth-child(8) {
+      transform: rotateY(-315deg) translateZ(-338px); } }
+
+/* end of Carousel3D Component */
