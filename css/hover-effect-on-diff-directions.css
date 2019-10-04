@@ -11,10 +11,12 @@ html {
 
 body {
 	font-size: 1.6rem;
-} 
+}
 
 div.multi-hover {
 	position: relative;
+	width: 40vw;
+	margin: 3% auto;
 }
 
 div.multi-hover img {
@@ -33,7 +35,7 @@ div.multi-hover span {
 	z-index: 2;
 	opacity: 0;
 	font-family: Verdana, Geneva, sans-serif;
-	font-size: 6vw;
+	font-size: 3vw;
 	line-height: 1.5;
 }
 
