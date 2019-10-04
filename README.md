@@ -23,35 +23,36 @@ They are ***HTML files*** and can be **viewed directly in the browser**. So, use
 
 #### Enjoy!
 
+
 [Zoom Gallery](./zoom-gallery.html)
 
-[3D Carousel with arrow controls](3D-Carousel.html)
+[a CSS 3D captioned image with media queries](./css3D-Captioned-Image.html) - Hover over it
+
+[3D Carousel with arrow controls](3D-Carousel.html) - navigate clicking at arrows and hover over images to zoom in
 
 [3D Venetian blind image transition](3D-Venetian-blind-image-transition.html)
 
-[3D Flip Image Gallery with Shadows](./3D-flip-gallery-w-shadows.html)
+[3D Flip Image Gallery with Shadows](./3D-flip-gallery-w-shadows.html) - Hover over images
 
 [Accordion menu](./accordion_menu.html)
 
-[Angled horizontal navigation bar with moving and fading effects](./angled_navigation.html)
+[Angled horizontal navigation bar with moving and fading effects](./angled_navigation.html) - Hover over navlinks
 
 [Animated 3D marquee text with CSS](./animated-3d-marquee-text-with-css.html)
 
-[Animated inset caption with blur filtered background](./animated-inset-caption-with-filtered-background.html)
+[Animated inset caption with blur filtered background](./animated-inset-caption-with-filtered-background.html) - Hover over it
 
 [a button to toggle window box in pure CSS](./windows_toggle_pure_css.html)
 
 [Auto filter image gallery with a little of JS](./auto-filter-gallery.html)
 
-[Auto generated image captions with progressive JS](./auto-generated-image-captions-with-progressive-JS.html)
-
 [a diamond mesh images for navigation](./diamond_mesh_nav.html)
 
 [Background Reveal On Scroll](./background-reveal-on-scroll.html)
 
-[A Before-After Comparison Slide Control with Pure CSS](./before-after-comparison-slide-control-pure-CSS.html)
+[A Before-After Comparison Slide Control with Pure CSS](./before-after-comparison-slide-control-pure-CSS.html) - grab and move the small white slide at bottom
 
-[A Before-After Comparison Slide Control with JS](./before-after-comparison-slide-control.html)
+[A Before-After Comparison Slide Control with JS](./before-after-comparison-slide-control.html) - grab and move the small white slide at bottom
 
 [Bouncy animation with some bars](./bouncy-animation.html)
 
@@ -61,13 +62,13 @@ They are ***HTML files*** and can be **viewed directly in the browser**. So, use
 
 [a fade responsive background on scroll](./fade-responsive-background-on-scroll.html)
 
-[a horizontal reverse-focus navbar using blur effect](./horizontal-reverse-focus-nav.html)
+[a horizontal reverse-focus navbar using blur effect](./horizontal-reverse-focus-nav.html) - hover over navlinks
 
-[hover effects from different directions](./hover-effect-on-diff-directions.html)
+[cool hover effects from different directions](./hover-effect-on-diff-directions.html) - hover over it from top, left, right and bottom
 
-[Rolodex-style 3D Image Gallery](./image-dex.html)
+[an astonish Rolodex-style 3D Image Gallery](./image-dex.html) - slide the ranger
 
-[CSS variables and Centering using Flexbox](./awesome.html)
+[Auto generated image captions with progressive JS](./auto-generated-image-captions-with-progressive-JS.html)
 
 [BLEND MODES](./blend_modes.html)
 
@@ -75,61 +76,43 @@ They are ***HTML files*** and can be **viewed directly in the browser**. So, use
 
 [Animate a box shadow - Perfomance comparison ](./box_shadow_performance.html)
 
-[Width calculated by CSS Calc()](./calc_width.html)
-
 [Center aligned logo on a navbar](./centered-logo-nav.html)
 
 [a CSS dynamic customized table](./css-dynamic-customized-table.html)
 
-[a CSS 3D captioned image with media queries](./css3D-Captioned-Image.html)
-
 [CSS typing effect using CSS variables](./css_var_animation_typing.html)
-
-[CSS var inheritance](./css_var_inherit.html)
-
-[CSS var inheritance Use cases](./css_var_inherit_usecases.html)
-
-[CSS Variables in @keyframes? Animating background color](./css_var_keyframes_animation_shit.html)
-
-[CSS variables in CSS var values](./css_var_token_lists.html)
-
-[CSS variable in Transitions](./css_var_transition_hope.html)
-
-[URL usage in CSS var](./css_var_url.html)
 
 [Box shadow Vs. Drop shadow](./drop_shadow.html)
 
-[a filtered caption image with dynamic clip and chained transitions](./filtered-caption-with-dynamic-clip.html)
+[a filtered caption image with dynamic clip and chained transitions](./filtered-caption-with-dynamic-clip.html) - Hover over image
 
-[Filtered Flexbox dynamic image gallery with JS](./filtered-flexbox-dynamic-image-gallery.html)
+[Filtered Flexbox dynamic image gallery with JS](./filtered-flexbox-dynamic-image-gallery.html) - use dropdown menu
 
 [a fixed scrolling disappearing banner](./fixed-scrolling-disappearing-banner.html)
 
 [Float image, overflow fix, responsive design using VH, VW measures](./float_image_vh_vw.html)
 
-[a simple form](./form_layouts.html)
-
 [Responsive design - Grid layout with media queries ](./grid_layout_with_media_queries.html)
 
-[Image Captions with CSS Transition Effects (./sliding and cross-fade)](img-caption-with-transition.html)
+[Image Captions with CSS Transition Effects (sliding and cross-fade)](img-caption-with-transition.html) - Hover over images
 
 [a VERY COOL Mobile-ready Before-After comparison UI](./mobile-ready-before-after-comparison-UI.html)
 
-[modern mansory with flexbox & JS](./modern_mansory_flexbox_with_JS.html)
+[modern mansory with flexbox & JS](./modern_mansory_flexbox_with_JS.html) - resize window
 
-[object-fit gallery](./object-fit-gallery.html)
+[object-fit gallery](./object-fit-gallery.html) - Hover over each image
 
-[an Amazing CSS Pure 3D Origami fold](./origami-css3D.html)
+[an Amazing CSS Pure 3D Origami fold](./origami-css3D.html) - Hover over it
 
 [Simple 'em' Parallax effect on scroll](./parallax_effect.html)
 
-[Pinterest Style Column Layout With Pure CSS - column props](./pinterest-style-column-layout-with-pure-CSS.html)
+[Pinterest Style Column Layout With Pure CSS - column props](./pinterest-style-column-layout-with-pure-CSS.html) - Hover over images
 
 [responsive prev-next UI Nav Pattern with Flexbox](./prev-next-nav.html)
 
-[Profile navigation style](./profile-nav.html)
+[Profile navigation style](./profile-nav.html) - hover over navlinks
 
-[modern mansory with flexbox & JS](./quad-image-gallery.html)
+[modern mansory with flexbox & JS](./quad-image-gallery.html) - click on each image
 
 [Pure CSS Radial Pop-out Button - No icon needed](./radial-pop-out-bt.html)
 
@@ -139,19 +122,19 @@ They are ***HTML files*** and can be **viewed directly in the browser**. So, use
 
 [a simple responsive container with flexbox and media query](./responsive_box_shadow.html)
 
-[Responsive Image Slider - Hover over it](./responsive_image_slider.html)
+[Responsive Image Slider](./responsive_image_slider.html) - Hover over it
 
-[Responsive Image Slider captioned - Hover over it](./responsive_image_slider_captioned.html)
+[Responsive Image Slider captioned](./responsive_image_slider_captioned.html) - Hover over it
 
 [Responsive Image overflow fix](./resposive_image_overflow.html)
 
-[Cool Off-kilter effect with CSS transform - Hover over navlinks](./rockband.html)
+[Cool Off-kilter effect with CSS transform](./rockband.html)  - Hover over navlinks
 
 [Rotate elements on scroll](./rotate-elements-on-scroll.html)
 
-[A Scratch Off Reveal With HTML5 Canvas](./scratch-off-reveal-with-HTML5-Canvas.html)
+[A Scratch Off Reveal With HTML5 Canvas](./scratch-off-reveal-with-HTML5-Canvas.html) - click and hold to scratch off
 
-[scroll on snap points](./scroll-snap.html)
+[scroll on snap points](./scroll-snap.html) - use horizontal and vertical mouse scrolling
 
 [Scroll to zoom and focus a image](./scroll-to-focus.html)
 
@@ -159,9 +142,9 @@ They are ***HTML files*** and can be **viewed directly in the browser**. So, use
 
 [same minimal layout above but within a container](./simple_layout2_one_div.html)
 
-[a sliding door with two copies of same image to reveal a background](./sliding-door-images.html)
+[a sliding door with two copies of same image to reveal a background](./sliding-door-images.html) - Hover over background image
 
-[Slider with JS with captions many options to control it](./slidy_css_and_JS.html)
+[Slider with captions and many options to control it in JS](./slidy_css_and_JS.html) - check code
 
 [Smooth scroll - click on navlinks](./smooth_scroll.html)
 
@@ -181,10 +164,28 @@ They are ***HTML files*** and can be **viewed directly in the browser**. So, use
 
 [experimenting position: sticky with Flexbox](./sticky-pos.html)
 
-[sticky position on an image along some paragraph](./sticky_pos_paragraph.html)
+[sticky position on an image along some paragraph](./sticky_pos_paragraph.html) - see better lower resolutions
 
-[tab-navigation bar](./tab_navigation.html)
+[tab-navigation bar](./tab_navigation.html) - tabs show up above 1201px resolution
 
 [wrapping text around CSS Shapes such as circular image](./wrapping-text-around-circular-image.html)
+
+[Width calculated by CSS Calc()](./calc_width.html)
+
+[CSS variables and Centering using Flexbox](./awesome.html)
+
+[CSS var inheritance](./css_var_inherit.html)
+
+[CSS var inheritance Use cases](./css_var_inherit_usecases.html)
+
+[CSS Variables in @keyframes? Animating background color](./css_var_keyframes_animation_shit.html)
+
+[CSS variables in CSS var values](./css_var_token_lists.html)
+
+[CSS variable in Transitions](./css_var_transition_hope.html)
+
+[URL usage in CSS var](./css_var_url.html)
+
+[a simple form](./form_layouts.html)
 
 That's all!
